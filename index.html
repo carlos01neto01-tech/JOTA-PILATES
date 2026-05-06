@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JMota Pilates & Fisioterapia - Pilates e fisioterapia para coluna, postura e qualidade de vida." />
   <title>JMota Pilates & Fisioterapia</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,7 +58,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 36px;
     }
 
     .brand {
@@ -68,7 +66,6 @@
       gap: 9px;
       color: #fff;
       line-height: 1;
-      flex: 0 0 auto;
     }
 
     .brand-mark {
@@ -122,16 +119,12 @@
       font-size: 8px;
       font-weight: 300;
       letter-spacing: -0.03em;
-      opacity: .92;
     }
 
     .nav {
       display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 56px;
       font-size: 18px;
-      font-weight: 300;
       color: #fff;
     }
 
@@ -194,9 +187,7 @@
     .hero {
       min-height: 668px;
       display: flex;
-      align-items: flex-start;
       justify-content: center;
-      overflow: hidden;
       background:
         linear-gradient(180deg, #fff 0%, rgba(255,255,255,.96) 30%, rgba(255,255,255,.74) 64%, rgba(255,255,255,.60) 100%),
         url("assets/hero-bg.webp") center bottom / cover no-repeat;
@@ -204,11 +195,8 @@
 
     .hero-content {
       width: min(980px, calc(100% - 48px));
-      margin: 0 auto;
       padding-top: 86px;
       text-align: center;
-      position: relative;
-      z-index: 2;
     }
 
     .headline {
@@ -220,8 +208,8 @@
       margin: 0 auto 20px;
     }
 
-    .headline .green,
-    .headline .green-mobile {
+    .green,
+    .green-mobile {
       color: var(--verde);
     }
 
@@ -270,8 +258,8 @@
     }
 
     .about {
-      background: #fff;
       padding: 110px 0 80px;
+      background: #fff;
     }
 
     .about-inner {
@@ -284,7 +272,8 @@
     }
 
     .about-title,
-    .section-title {
+    .section-title,
+    .for-you-title {
       font-size: 50px;
       line-height: 1.04;
       letter-spacing: -0.075em;
@@ -331,7 +320,6 @@
     }
 
     .benefit-item {
-      width: 100%;
       min-height: 116px;
       border: 1.7px solid var(--verde);
       border-radius: 999px;
@@ -377,7 +365,6 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 22px;
-      align-items: stretch;
     }
 
     .service-card {
@@ -465,13 +452,10 @@
     }
 
     .for-you-title {
-      font-size: 50px;
-      line-height: .98;
-      letter-spacing: -0.075em;
-      font-weight: 700;
+      color: #fff;
       text-align: center;
-      max-width: 720px;
-      margin: 0 auto 34px;
+      max-width: 900px;
+      margin: 0 auto 38px;
     }
 
     .problem-list {
@@ -481,18 +465,18 @@
     }
 
     .problem-item {
-      min-height: 68px;
+      min-height: 76px;
       border: 1.7px solid var(--verde-lima);
       border-radius: 999px;
       background: rgba(255,255,255,.08);
       display: grid;
       grid-template-columns: 78px 1fr;
       align-items: center;
-      padding: 0 34px 0 0;
+      padding: 10px 34px 10px 0;
     }
 
     .problem-x {
-      color: #ff0000;
+      color: red;
       font-size: 28px;
       font-weight: 700;
       text-align: center;
@@ -500,7 +484,7 @@
 
     .problem-item span:last-child {
       font-size: 22px;
-      line-height: 1.05;
+      line-height: 1.04;
       letter-spacing: -0.065em;
       text-align: center;
       font-weight: 300;
@@ -523,7 +507,11 @@
         height: var(--header-h);
       }
 
-      .header-inner {
+      .header-inner,
+      .hero-content,
+      .about-inner,
+      .services-inner,
+      .for-you-inner {
         width: calc(100% - 56px);
       }
 
@@ -607,14 +595,6 @@
           url("assets/hero-bg.webp") center bottom / cover no-repeat;
       }
 
-      .hero-content,
-      .about-inner,
-      .benefits-inner,
-      .services-inner,
-      .for-you-inner {
-        width: calc(100% - 56px);
-      }
-
       .hero-content {
         padding-top: 82px;
         text-align: left;
@@ -622,7 +602,8 @@
 
       .headline,
       .about-title,
-      .section-title {
+      .section-title,
+      .for-you-title {
         font-size: 52px;
         line-height: .96;
         letter-spacing: -0.082em;
@@ -758,26 +739,25 @@
 
       .for-you {
         margin-top: 0;
-        padding: 86px 0 82px;
+        padding: 92px 0 82px;
       }
 
       .for-you-title {
+        width: 100%;
+        max-width: 100%;
         text-align: center;
-        font-size: 34px;
-        line-height: .95;
-        letter-spacing: -0.075em;
-        max-width: 340px;
-        margin-bottom: 30px;
+        margin: 0 auto 34px;
+        color: #fff;
       }
 
       .problem-list {
-        gap: 13px;
+        gap: 14px;
       }
 
       .problem-item {
-        min-height: 76px;
-        grid-template-columns: 52px 1fr;
-        padding: 10px 20px 10px 0;
+        min-height: 88px;
+        grid-template-columns: 54px 1fr;
+        padding: 12px 22px 12px 0;
       }
 
       .problem-x {
@@ -785,38 +765,40 @@
       }
 
       .problem-item span:last-child {
-        font-size: 19px;
+        font-size: 18px;
         line-height: 1.04;
         letter-spacing: -0.065em;
-        text-align: center;
+        max-width: 92%;
+        margin: 0 auto;
       }
     }
 
     @media (max-width: 430px) {
-      .header-inner,
-      .hero-content,
-      .about-inner,
-      .benefits-inner,
-      .services-inner,
-      .for-you-inner {
-        width: calc(100% - 56px);
-      }
-
       .headline,
       .about-title,
-      .section-title {
+      .section-title,
+      .for-you-title {
         font-size: 52px;
       }
 
       .subtitle {
         font-size: 25px;
       }
+
+      .problem-item {
+        min-height: 84px;
+      }
+
+      .problem-item span:last-child {
+        font-size: 17px;
+      }
     }
 
     @media (max-width: 390px) {
       .headline,
       .about-title,
-      .section-title {
+      .section-title,
+      .for-you-title {
         font-size: 49px;
       }
 
@@ -838,7 +820,7 @@
       }
 
       .problem-item span:last-child {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
 
@@ -853,7 +835,8 @@
 
       .headline,
       .about-title,
-      .section-title {
+      .section-title,
+      .for-you-title {
         font-size: 45px;
       }
 
@@ -878,11 +861,11 @@
       }
 
       .problem-item {
-        min-height: 72px;
+        min-height: 80px;
       }
 
       .problem-item span:last-child {
-        font-size: 17px;
+        font-size: 15px;
       }
     }
   </style>
@@ -907,9 +890,7 @@
         <a href="#avaliacao">Avaliação</a>
       </nav>
 
-      <a class="header-cta" href="https://wa.me/5544998322107" target="_blank" rel="noopener">
-        Contato
-      </a>
+      <a class="header-cta" href="https://wa.me/5544998322107" target="_blank" rel="noopener">Contato</a>
 
       <button class="menu-button" type="button" aria-label="Abrir menu">
         <span></span>
@@ -953,9 +934,7 @@
     <section class="about" id="sobre">
       <div class="about-inner">
         <div class="about-copy">
-          <h2 class="about-title">
-            Seu corpo merece tratamento profissional
-          </h2>
+          <h2 class="about-title">Seu corpo merece tratamento profissional</h2>
 
           <p class="about-text">
             Na JMota Pilates &amp; Fisioterapia, cada atendimento é pensado de forma individual. Aqui, não existe protocolo genérico. Existe análise, acompanhamento e evolução real.
@@ -1053,7 +1032,10 @@
 
     <section class="for-you" id="avaliacao">
       <div class="for-you-inner">
-        <h2 class="for-you-title">Esse acompanhamento é para você que:</h2>
+        <h2 class="for-you-title">
+          Esse acompanhamento é<br>
+          para você que:
+        </h2>
 
         <div class="problem-list">
           <div class="problem-item">
