@@ -234,7 +234,8 @@
       margin: 0 auto 20px;
     }
 
-    .headline .green {
+    .headline .green,
+    .headline .green-mobile {
       color: var(--verde);
     }
 
@@ -304,6 +305,7 @@
       from {
         transform: translateX(-85%) rotate(8deg);
       }
+
       to {
         transform: translateX(85%) rotate(8deg);
       }
@@ -466,16 +468,16 @@
 
       .hero {
         min-height: auto;
-        padding-bottom: 72px;
+        padding-bottom: 92px;
         background:
           linear-gradient(
             180deg,
             #fff 0%,
-            #fff 48%,
-            rgba(255,255,255,.94) 66%,
-            rgba(255,255,255,.72) 100%
+            #fff 54%,
+            rgba(255,255,255,.94) 72%,
+            rgba(255,255,255,.70) 100%
           ),
-          url("assets/hero-bg.webp") center bottom / auto 300px no-repeat;
+          url("assets/hero-bg.webp") center bottom / cover no-repeat;
       }
 
       .hero-content {
@@ -485,16 +487,12 @@
       }
 
       .headline {
-        font-size: 50px;
-        line-height: .96;
-        letter-spacing: -0.075em;
-        max-width: 100%;
         width: 100%;
-        margin: 0 0 18px;
-      }
-
-      .headline .green-mobile {
-        color: var(--verde);
+        max-width: 100%;
+        font-size: 52px;
+        line-height: .96;
+        letter-spacing: -0.082em;
+        margin: 0 0 20px;
       }
 
       .desktop-title {
@@ -506,12 +504,12 @@
       }
 
       .subtitle {
-        font-size: 24px;
-        line-height: 1.04;
-        letter-spacing: -0.075em;
-        max-width: 100%;
         width: 100%;
-        margin: 0 0 38px;
+        max-width: 100%;
+        font-size: 25px;
+        line-height: 1.03;
+        letter-spacing: -0.078em;
+        margin: 0 0 40px;
       }
 
       .hero-actions {
@@ -528,7 +526,7 @@
       }
 
       .about {
-        padding: 74px 0 54px;
+        padding: 76px 0 54px;
       }
 
       .about-inner {
@@ -545,11 +543,11 @@
 
       .about-title {
         order: 1;
-        font-size: 50px;
-        line-height: .98;
-        letter-spacing: -0.075em;
-        max-width: 100%;
         width: 100%;
+        max-width: 100%;
+        font-size: 52px;
+        line-height: .96;
+        letter-spacing: -0.082em;
         margin: 0;
       }
 
@@ -562,11 +560,11 @@
 
       .about-text {
         order: 3;
+        width: 100%;
+        max-width: 100%;
         font-size: 24px;
         line-height: 1.22;
         letter-spacing: -0.075em;
-        max-width: 100%;
-        width: 100%;
         margin-top: 4px;
       }
     }
@@ -591,27 +589,32 @@
         padding-top: 82px;
       }
 
-      .headline {
-        font-size: 50px;
-        max-width: 100%;
+      .headline,
+      .about-title {
+        font-size: 52px;
+        line-height: .96;
+        letter-spacing: -0.082em;
       }
 
       .subtitle {
-        font-size: 23px;
-        max-width: 100%;
+        font-size: 25px;
+        line-height: 1.03;
       }
 
       .btn {
         min-height: 76px;
         font-size: 20px;
       }
+    }
 
+    @media (max-width: 390px) {
+      .headline,
       .about-title {
-        font-size: 50px;
+        font-size: 49px;
       }
 
-      .about-text {
-        font-size: 24px;
+      .subtitle {
+        font-size: 23px;
       }
     }
 
