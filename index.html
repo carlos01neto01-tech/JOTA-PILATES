@@ -622,8 +622,7 @@
 
       .headline,
       .about-title,
-      .section-title,
-      .for-you-title {
+      .section-title {
         font-size: 52px;
         line-height: .96;
         letter-spacing: -0.082em;
@@ -716,7 +715,7 @@
       .services-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 22px 14px;
+        gap: 24px 14px;
       }
 
       .service-card,
@@ -727,65 +726,69 @@
 
       .service-card:nth-child(5) {
         grid-column: 1 / -1;
-        width: 50%;
+        width: 52%;
         justify-self: center;
       }
 
       .service-card {
-        min-height: 205px;
+        min-height: 280px;
         border-radius: 28px;
-        padding: 22px 12px;
+        padding: 26px 12px;
       }
 
       .service-icon {
-        width: 34px;
-        height: 34px;
-        margin-bottom: 14px;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 18px;
       }
 
       .service-card h3 {
-        font-size: 24px;
+        font-size: 27px;
         line-height: .95;
         letter-spacing: -0.075em;
-        margin-bottom: 13px;
+        margin-bottom: 16px;
       }
 
       .service-card p {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1.02;
         letter-spacing: -0.075em;
-        max-width: 138px;
+        max-width: 210px;
       }
 
       .for-you {
         margin-top: 0;
-        padding: 78px 0 74px;
+        padding: 86px 0 82px;
       }
 
       .for-you-title {
         text-align: center;
         font-size: 34px;
+        line-height: .95;
+        letter-spacing: -0.075em;
         max-width: 340px;
-        margin-bottom: 26px;
+        margin-bottom: 30px;
       }
 
       .problem-list {
-        gap: 11px;
+        gap: 13px;
       }
 
       .problem-item {
-        min-height: 58px;
-        grid-template-columns: 48px 1fr;
-        padding-right: 18px;
+        min-height: 76px;
+        grid-template-columns: 52px 1fr;
+        padding: 10px 20px 10px 0;
       }
 
       .problem-x {
-        font-size: 22px;
+        font-size: 24px;
       }
 
       .problem-item span:last-child {
-        font-size: 16px;
-        line-height: 1.05;
+        font-size: 19px;
+        line-height: 1.04;
+        letter-spacing: -0.065em;
+        text-align: center;
       }
     }
 
@@ -822,15 +825,20 @@
       }
 
       .service-card {
-        min-height: 195px;
+        min-height: 265px;
       }
 
       .service-card h3 {
-        font-size: 22px;
+        font-size: 25px;
       }
 
       .service-card p {
-        font-size: 11px;
+        font-size: 15px;
+        max-width: 190px;
+      }
+
+      .problem-item span:last-child {
+        font-size: 18px;
       }
     }
 
@@ -855,6 +863,26 @@
 
       .btn {
         font-size: 18px;
+      }
+
+      .service-card {
+        min-height: 250px;
+      }
+
+      .service-card h3 {
+        font-size: 23px;
+      }
+
+      .service-card p {
+        font-size: 14px;
+      }
+
+      .problem-item {
+        min-height: 72px;
+      }
+
+      .problem-item span:last-child {
+        font-size: 17px;
       }
     }
   </style>
