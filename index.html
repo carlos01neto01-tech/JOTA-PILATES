@@ -150,13 +150,6 @@
       justify-content: center;
       font-size: 18px;
       font-weight: 700;
-      transition: transform .28s ease, box-shadow .28s ease, background .28s ease;
-    }
-
-    .header-cta:hover {
-      transform: translateY(-3px);
-      background: rgba(255,255,255,.18);
-      box-shadow: 0 18px 32px rgba(23,111,49,.18);
     }
 
     .menu-button {
@@ -200,19 +193,12 @@
 
     .hero {
       min-height: 668px;
-      position: relative;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       overflow: hidden;
       background:
-        linear-gradient(
-          180deg,
-          #fff 0%,
-          rgba(255,255,255,.96) 30%,
-          rgba(255,255,255,.74) 64%,
-          rgba(255,255,255,.60) 100%
-        ),
+        linear-gradient(180deg, #fff 0%, rgba(255,255,255,.96) 30%, rgba(255,255,255,.74) 64%, rgba(255,255,255,.60) 100%),
         url("assets/hero-bg.webp") center bottom / cover no-repeat;
     }
 
@@ -257,7 +243,6 @@
     }
 
     .btn {
-      position: relative;
       width: 100%;
       min-height: 104px;
       border-radius: 999px;
@@ -269,46 +254,11 @@
       line-height: 1.05;
       letter-spacing: -0.065em;
       font-weight: 700;
-      overflow: hidden;
-      isolation: isolate;
-      transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
     }
 
     .btn-primary {
       background: linear-gradient(110deg, var(--verde-lima), #cbd200, #a0a500);
       color: var(--verde);
-      box-shadow: 0 12px 28px rgba(150,160,0,.14);
-    }
-
-    .btn-primary::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,.72) 50%, transparent 65%);
-      transform: translateX(-82%) rotate(8deg);
-      opacity: 0;
-      z-index: -1;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-6px) scale(1.015);
-      box-shadow: 0 26px 44px rgba(23,111,49,.22), 0 0 0 8px rgba(219,229,0,.18);
-      filter: saturate(1.08);
-    }
-
-    .btn-primary:hover::before {
-      opacity: 1;
-      animation: shine .85s ease forwards;
-    }
-
-    @keyframes shine {
-      from {
-        transform: translateX(-85%) rotate(8deg);
-      }
-
-      to {
-        transform: translateX(85%) rotate(8deg);
-      }
     }
 
     .btn-blur {
@@ -317,18 +267,11 @@
       background: rgba(255,255,255,.30);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      box-shadow: inset 0 0 34px rgba(255,255,255,.50), 0 10px 24px rgba(23,111,49,.08);
-    }
-
-    .btn-blur:hover {
-      transform: translateY(-4px);
-      background: rgba(255,255,255,.43);
-      box-shadow: inset 0 0 42px rgba(255,255,255,.66), 0 22px 40px rgba(23,111,49,.14);
     }
 
     .about {
       background: #fff;
-      padding: 110px 0 104px;
+      padding: 110px 0 80px;
     }
 
     .about-inner {
@@ -340,12 +283,16 @@
       gap: 88px;
     }
 
-    .about-title {
+    .about-title,
+    .section-title {
       font-size: 50px;
       line-height: 1.04;
       letter-spacing: -0.075em;
       font-weight: 700;
       color: var(--verde);
+    }
+
+    .about-title {
       margin-bottom: 44px;
     }
 
@@ -370,6 +317,195 @@
       height: auto;
     }
 
+    .benefits {
+      padding: 20px 0 90px;
+      background: #fff;
+    }
+
+    .benefits-inner {
+      width: min(1160px, calc(100% - 90px));
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .benefit-item {
+      width: 100%;
+      min-height: 116px;
+      border: 1.7px solid var(--verde);
+      border-radius: 999px;
+      display: grid;
+      grid-template-columns: 120px 1fr 120px;
+      align-items: center;
+      background: rgba(23,111,49,.035);
+    }
+
+    .benefit-check {
+      width: 54px;
+      height: 34px;
+      margin-left: 46px;
+      border-left: 10px solid var(--verde-lima);
+      border-bottom: 10px solid var(--verde-lima);
+      transform: rotate(-45deg);
+    }
+
+    .benefit-item strong {
+      text-align: center;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.075em;
+      color: #050505;
+    }
+
+    .services {
+      padding: 0 0 100px;
+      background: #fff;
+    }
+
+    .services-inner {
+      width: min(1160px, calc(100% - 90px));
+      margin: 0 auto;
+    }
+
+    .services .section-title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .service-card {
+      min-height: 370px;
+      border: 1.7px solid var(--verde);
+      border-radius: 30px;
+      background: rgba(23,111,49,.035);
+      padding: 48px 18px 34px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      grid-column: span 2;
+    }
+
+    .service-card:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .service-card:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
+
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 26px;
+      color: var(--verde);
+    }
+
+    .service-card h3 {
+      font-size: 34px;
+      line-height: .95;
+      letter-spacing: -0.075em;
+      color: var(--verde);
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .service-card p {
+      font-size: 19px;
+      line-height: 1.05;
+      letter-spacing: -0.075em;
+      font-weight: 300;
+      max-width: 265px;
+    }
+
+    .for-you {
+      position: relative;
+      background: var(--verde);
+      color: #fff;
+      padding: 86px 0 90px;
+      margin-top: 40px;
+    }
+
+    .for-you::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      width: 150px;
+      height: 70px;
+      transform: translateX(-50%);
+      background: #fff;
+      border-radius: 0 0 90px 90px;
+    }
+
+    .for-you::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 22px;
+      height: 22px;
+      background: var(--verde);
+    }
+
+    .for-you-inner {
+      width: min(1060px, calc(100% - 90px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .for-you-title {
+      font-size: 50px;
+      line-height: .98;
+      letter-spacing: -0.075em;
+      font-weight: 700;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 34px;
+    }
+
+    .problem-list {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .problem-item {
+      min-height: 68px;
+      border: 1.7px solid var(--verde-lima);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      align-items: center;
+      padding: 0 34px 0 0;
+    }
+
+    .problem-x {
+      color: #ff0000;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .problem-item span:last-child {
+      font-size: 22px;
+      line-height: 1.05;
+      letter-spacing: -0.065em;
+      text-align: center;
+      font-weight: 300;
+    }
+
     .desktop-title {
       display: inline;
     }
@@ -389,7 +525,6 @@
 
       .header-inner {
         width: calc(100% - 56px);
-        justify-content: space-between;
       }
 
       .brand-mark {
@@ -440,7 +575,6 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        justify-content: flex-start;
         gap: 0;
         padding: 18px 28px 28px;
         transform: translateY(-120%);
@@ -448,7 +582,6 @@
         visibility: hidden;
         pointer-events: none;
         transition: .28s ease;
-        box-shadow: 0 18px 40px rgba(0,0,0,.18);
       }
 
       .nav.active {
@@ -470,28 +603,35 @@
         min-height: auto;
         padding-bottom: 92px;
         background:
-          linear-gradient(
-            180deg,
-            #fff 0%,
-            #fff 54%,
-            rgba(255,255,255,.94) 72%,
-            rgba(255,255,255,.70) 100%
-          ),
+          linear-gradient(180deg, #fff 0%, #fff 54%, rgba(255,255,255,.94) 72%, rgba(255,255,255,.70) 100%),
           url("assets/hero-bg.webp") center bottom / cover no-repeat;
       }
 
-      .hero-content {
+      .hero-content,
+      .about-inner,
+      .benefits-inner,
+      .services-inner,
+      .for-you-inner {
         width: calc(100% - 56px);
+      }
+
+      .hero-content {
         padding-top: 82px;
         text-align: left;
+      }
+
+      .headline,
+      .about-title,
+      .section-title,
+      .for-you-title {
+        font-size: 52px;
+        line-height: .96;
+        letter-spacing: -0.082em;
       }
 
       .headline {
         width: 100%;
         max-width: 100%;
-        font-size: 52px;
-        line-height: .96;
-        letter-spacing: -0.082em;
         margin: 0 0 20px;
       }
 
@@ -521,7 +661,6 @@
       .btn {
         min-height: 76px;
         font-size: 20px;
-        letter-spacing: -0.06em;
         padding: 0 18px;
       }
 
@@ -530,7 +669,6 @@
       }
 
       .about-inner {
-        width: calc(100% - 56px);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -544,10 +682,6 @@
       .about-title {
         order: 1;
         width: 100%;
-        max-width: 100%;
-        font-size: 52px;
-        line-height: .96;
-        letter-spacing: -0.082em;
         margin: 0;
       }
 
@@ -555,7 +689,6 @@
         order: 2;
         width: 100%;
         border-radius: 0 50px 0 50px;
-        box-shadow: 0 14px 30px rgba(0,0,0,.12);
       }
 
       .about-text {
@@ -565,77 +698,159 @@
         font-size: 24px;
         line-height: 1.22;
         letter-spacing: -0.075em;
-        margin-top: 4px;
+      }
+
+      .benefits {
+        display: none;
+      }
+
+      .services {
+        padding: 40px 0 84px;
+      }
+
+      .services .section-title {
+        text-align: left;
+        margin-bottom: 36px;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 14px;
+      }
+
+      .service-card,
+      .service-card:nth-child(4),
+      .service-card:nth-child(5) {
+        grid-column: auto;
+      }
+
+      .service-card:nth-child(5) {
+        grid-column: 1 / -1;
+        width: 50%;
+        justify-self: center;
+      }
+
+      .service-card {
+        min-height: 205px;
+        border-radius: 28px;
+        padding: 22px 12px;
+      }
+
+      .service-icon {
+        width: 34px;
+        height: 34px;
+        margin-bottom: 14px;
+      }
+
+      .service-card h3 {
+        font-size: 24px;
+        line-height: .95;
+        letter-spacing: -0.075em;
+        margin-bottom: 13px;
+      }
+
+      .service-card p {
+        font-size: 12px;
+        line-height: 1.02;
+        letter-spacing: -0.075em;
+        max-width: 138px;
+      }
+
+      .for-you {
+        margin-top: 0;
+        padding: 78px 0 74px;
+      }
+
+      .for-you-title {
+        text-align: center;
+        font-size: 34px;
+        max-width: 340px;
+        margin-bottom: 26px;
+      }
+
+      .problem-list {
+        gap: 11px;
+      }
+
+      .problem-item {
+        min-height: 58px;
+        grid-template-columns: 48px 1fr;
+        padding-right: 18px;
+      }
+
+      .problem-x {
+        font-size: 22px;
+      }
+
+      .problem-item span:last-child {
+        font-size: 16px;
+        line-height: 1.05;
       }
     }
 
     @media (max-width: 430px) {
-      :root {
-        --header-h: 110px;
-      }
-
       .header-inner,
       .hero-content,
-      .about-inner {
+      .about-inner,
+      .benefits-inner,
+      .services-inner,
+      .for-you-inner {
         width: calc(100% - 56px);
       }
 
-      .menu-button {
-        width: 62px;
-        height: 58px;
-      }
-
-      .hero-content {
-        padding-top: 82px;
-      }
-
       .headline,
-      .about-title {
+      .about-title,
+      .section-title {
         font-size: 52px;
-        line-height: .96;
-        letter-spacing: -0.082em;
       }
 
       .subtitle {
         font-size: 25px;
-        line-height: 1.03;
-      }
-
-      .btn {
-        min-height: 76px;
-        font-size: 20px;
       }
     }
 
     @media (max-width: 390px) {
       .headline,
-      .about-title {
+      .about-title,
+      .section-title {
         font-size: 49px;
       }
 
       .subtitle {
         font-size: 23px;
       }
+
+      .service-card {
+        min-height: 195px;
+      }
+
+      .service-card h3 {
+        font-size: 22px;
+      }
+
+      .service-card p {
+        font-size: 11px;
+      }
     }
 
     @media (max-width: 375px) {
       .header-inner,
       .hero-content,
-      .about-inner {
+      .about-inner,
+      .services-inner,
+      .for-you-inner {
         width: calc(100% - 44px);
       }
 
       .headline,
-      .about-title {
+      .about-title,
+      .section-title {
         font-size: 45px;
       }
 
       .subtitle {
         font-size: 21px;
-      }
-
-      .about-text {
-        font-size: 22px;
       }
 
       .btn {
@@ -721,6 +936,127 @@
 
         <div class="about-image-wrap">
           <img src="assets/sobre-nos.webp" alt="Fachada da JMota Pilates & Fisioterapia" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="benefits-inner">
+        <div class="benefit-item">
+          <span class="benefit-check"></span>
+          <strong>Atendimento humanizado</strong>
+          <span></span>
+        </div>
+
+        <div class="benefit-item">
+          <span class="benefit-check"></span>
+          <strong>Ambiente acolhedor</strong>
+          <span></span>
+        </div>
+
+        <div class="benefit-item">
+          <span class="benefit-check"></span>
+          <strong>Foco em resultado</strong>
+          <span></span>
+        </div>
+
+        <div class="benefit-item">
+          <span class="benefit-check"></span>
+          <strong>Planos personalizados</strong>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="services-inner">
+        <h2 class="section-title">Serviços</h2>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <svg class="service-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="5"/>
+              <path d="M20 34c8-14 16-14 24 0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <h3>Pilates Clínico</h3>
+            <p>Fortalecimento, postura, mobilidade e prevenção de dores através de exercícios orientados.</p>
+          </article>
+
+          <article class="service-card">
+            <svg class="service-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <path d="M18 38c8-6 20-6 28 0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              <path d="M22 24h20M32 14v36" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="32" cy="32" r="25" stroke="currentColor" stroke-width="5"/>
+            </svg>
+            <h3>Fisioterapia</h3>
+            <p>Atendimento voltado para avaliação, prevenção e reabilitação de dores, limitações de movimento e desconfortos musculares ou articulares.</p>
+          </article>
+
+          <article class="service-card">
+            <svg class="service-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <path d="M20 44c8-18 16-18 24 0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              <path d="M22 24c6 6 14 6 20 0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="32" cy="18" r="6" stroke="currentColor" stroke-width="5"/>
+            </svg>
+            <h3>Tratamento para dores</h3>
+            <p>Acompanhamento para pessoas que convivem com dores na lombar, joelhos, coluna, ombros e outras regiões que impactam a rotina.</p>
+          </article>
+
+          <article class="service-card">
+            <svg class="service-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <path d="M18 44h28c8 0 8-12 0-12H34" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              <path d="M26 20h18M26 20v24M44 20v12" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <h3>Pilates para idosos</h3>
+            <p>Exercícios orientados para melhorar equilíbrio, força, coordenação, mobilidade e autonomia no dia a dia.</p>
+          </article>
+
+          <article class="service-card">
+            <svg class="service-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <path d="M32 12v40" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              <path d="M20 24c8-8 16-8 24 0M20 40c8 8 16 8 24 0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <h3>Postura e mobilidade</h3>
+            <p>Trabalho focado em consciência corporal, alinhamento, flexibilidade e melhora dos movimentos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="for-you" id="avaliacao">
+      <div class="for-you-inner">
+        <h2 class="for-you-title">Esse acompanhamento é para você que:</h2>
+
+        <div class="problem-list">
+          <div class="problem-item">
+            <span class="problem-x">×</span>
+            <span>Sente dores frequentes na coluna, joelho ou articulações.</span>
+          </div>
+
+          <div class="problem-item">
+            <span class="problem-x">×</span>
+            <span>Passa muito tempo sentado e percebe o corpo travado.</span>
+          </div>
+
+          <div class="problem-item">
+            <span class="problem-x">×</span>
+            <span>Quer melhorar postura e mobilidade.</span>
+          </div>
+
+          <div class="problem-item">
+            <span class="problem-x">×</span>
+            <span>Busca envelhecer com mais autonomia.</span>
+          </div>
+
+          <div class="problem-item">
+            <span class="problem-x">×</span>
+            <span>Precisa de exercícios seguros e bem orientados.</span>
+          </div>
+
+          <div class="problem-item">
+            <span class="problem-x">×</span>
+            <span>Quer cuidar do corpo antes que a dor limite sua rotina.</span>
+          </div>
         </div>
       </div>
     </section>
