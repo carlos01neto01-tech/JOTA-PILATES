@@ -998,3 +998,646 @@
   </script>
 </body>
 </html>
+
+<!-- ========================= -->
+<!-- SESSÃO 5 -->
+<!-- ========================= -->
+
+<section class="why-jmota">
+
+  <div class="why-image">
+    <img src="assets/fisioterapeuta.webp" alt="Especialista JMota Pilates">
+  </div>
+
+  <div class="why-overlay"></div>
+
+  <div class="why-content">
+
+    <h2 class="why-title">
+      Por que escolher<br>
+      a <span>J.Mota?</span>
+    </h2>
+
+    <div class="why-carousel-wrapper">
+
+      <div class="why-indicator"></div>
+
+      <div class="why-carousel-track">
+
+        <div class="why-item active">
+          Atendimento próximo e individualizado.
+        </div>
+
+        <div class="why-item">
+          Exercícios adaptados para cada necessidade.
+        </div>
+
+        <div class="why-item">
+          Ambiente acolhedor e seguro.
+        </div>
+
+        <div class="why-item">
+          Acompanhamento durante a prática.
+        </div>
+
+        <div class="why-item">
+          Cuidado para jovens, adultos e idosos.
+        </div>
+
+        <!-- DUPLICAÇÃO PRA LOOP CONTÍNUO -->
+        <div class="why-item">
+          Atendimento próximo e individualizado.
+        </div>
+
+        <div class="why-item">
+          Exercícios adaptados para cada necessidade.
+        </div>
+
+        <div class="why-item">
+          Ambiente acolhedor e seguro.
+        </div>
+
+        <div class="why-item">
+          Acompanhamento durante a prática.
+        </div>
+
+        <div class="why-item">
+          Cuidado para jovens, adultos e idosos.
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- SESSÃO 6 -->
+<!-- ========================= -->
+
+<section class="warning-section">
+
+  <div class="warning-box">
+
+    <h2>
+      Seu corpo dá sinais antes de parar.
+    </h2>
+
+    <p>
+      <strong>
+        A dor no joelho, a lombar travada, a postura cansada e a falta de disposição
+      </strong>
+
+      não aparecem do nada. Muitas vezes, são sinais de que o corpo precisa de atenção,
+      fortalecimento e movimento correto. Cuidar agora é evitar que pequenos incômodos
+      virem grandes limitações.
+    </p>
+
+    <a href="https://wa.me/5544998322107" class="warning-btn">
+      Agendar avaliação pelo WhatsApp
+    </a>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- SESSÃO 7 -->
+<!-- ========================= -->
+
+<section class="process-section">
+
+  <h2 class="process-title">
+    Nosso processo de atendimento
+  </h2>
+
+  <div class="process-wrapper">
+
+    <div class="process-circle process-1">
+      <div class="process-front">
+        <span>01</span>
+        <h3>Avaliação inicial</h3>
+      </div>
+
+      <div class="process-back">
+        Entendemos suas dores, rotina e limitações para iniciar o tratamento correto.
+      </div>
+    </div>
+
+    <div class="process-circle process-2">
+      <div class="process-front">
+        <span>02</span>
+        <h3>Plano de cuidado</h3>
+      </div>
+
+      <div class="process-back">
+        Criamos exercícios personalizados conforme sua necessidade e evolução.
+      </div>
+    </div>
+
+    <div class="process-circle process-3">
+      <div class="process-front">
+        <span>03</span>
+        <h3>Acompanhamento</h3>
+      </div>
+
+      <div class="process-back">
+        Ajustamos os movimentos e acompanhamos cada etapa do processo.
+      </div>
+    </div>
+
+    <div class="process-circle process-4">
+      <div class="process-front">
+        <span>04</span>
+        <h3>Evolução contínua</h3>
+      </div>
+
+      <div class="process-back">
+        O objetivo é manter constância, mobilidade e qualidade de vida no longo prazo.
+      </div>
+    </div>
+
+    <div class="process-ring"></div>
+    <div class="process-ring process-ring-2"></div>
+
+  </div>
+</section>
+
+<style>
+
+/* ========================= */
+/* SESSÃO 5 */
+/* ========================= */
+
+.why-jmota{
+  position:relative;
+  overflow:hidden;
+  min-height:860px;
+  background:#f4f4f4;
+}
+
+.why-image{
+  position:absolute;
+  inset:0;
+}
+
+.why-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.why-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(244,244,244,0.98) 0%,
+    rgba(244,244,244,0.92) 28%,
+    rgba(244,244,244,0.65) 48%,
+    rgba(244,244,244,0) 72%
+  );
+}
+
+.why-content{
+  position:relative;
+  z-index:3;
+  width:min(1200px, calc(100% - 100px));
+  margin:0 auto;
+  padding:120px 0;
+}
+
+.why-title{
+  font-size:78px;
+  line-height:.92;
+  letter-spacing:-0.08em;
+  color:#176f31;
+  margin-bottom:80px;
+}
+
+.why-title span{
+  color:#dbe500;
+}
+
+.why-carousel-wrapper{
+  position:relative;
+  width:720px;
+  overflow:hidden;
+}
+
+.why-indicator{
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  width:0;
+  height:0;
+  border-top:22px solid transparent;
+  border-bottom:22px solid transparent;
+  border-left:34px solid #176f31;
+  z-index:5;
+}
+
+.why-carousel-track{
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+  animation:scrollWhy 14s linear infinite;
+}
+
+.why-item{
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-0.06em;
+  font-weight:300;
+  opacity:.45;
+  padding-left:70px;
+  transition:.3s;
+}
+
+.why-item.active{
+  opacity:1;
+  font-weight:700;
+  color:#000;
+}
+
+@keyframes scrollWhy{
+  0%{
+    transform:translateY(0);
+  }
+
+  100%{
+    transform:translateY(-50%);
+  }
+}
+
+/* ========================= */
+/* SESSÃO 6 */
+/* ========================= */
+
+.warning-section{
+  padding:120px 0;
+  background:#f4f4f4;
+}
+
+.warning-box{
+  width:min(1200px, calc(100% - 100px));
+  margin:0 auto;
+  border:2px solid #176f31;
+  border-radius:42px;
+  padding:90px 80px;
+  text-align:center;
+}
+
+.warning-box h2{
+  font-size:72px;
+  line-height:.94;
+  letter-spacing:-0.08em;
+  color:#176f31;
+  margin-bottom:34px;
+}
+
+.warning-box p{
+  font-size:36px;
+  line-height:1.06;
+  letter-spacing:-0.06em;
+  max-width:1080px;
+  margin:0 auto 54px;
+}
+
+.warning-box p strong{
+  font-weight:700;
+}
+
+.warning-btn{
+  width:620px;
+  max-width:100%;
+  min-height:110px;
+  border-radius:999px;
+  margin:0 auto;
+  background:#dbe500;
+  color:#176f31;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  font-weight:700;
+  letter-spacing:-0.06em;
+}
+
+/* ========================= */
+/* SESSÃO 7 */
+/* ========================= */
+
+.process-section{
+  background:#f4f4f4;
+  padding:60px 0 140px;
+}
+
+.process-title{
+  text-align:center;
+  color:#176f31;
+  font-size:74px;
+  line-height:.94;
+  letter-spacing:-0.08em;
+  margin-bottom:80px;
+}
+
+.process-wrapper{
+  width:1100px;
+  height:900px;
+  margin:0 auto;
+  position:relative;
+}
+
+.process-ring,
+.process-ring-2{
+  position:absolute;
+  inset:50%;
+  transform:translate(-50%,-50%);
+  border:5px solid #176f31;
+  border-radius:50%;
+}
+
+.process-ring{
+  width:900px;
+  height:620px;
+}
+
+.process-ring-2{
+  width:760px;
+  height:500px;
+  opacity:.7;
+}
+
+.process-circle{
+  position:absolute;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  background:#176f31;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  cursor:pointer;
+  overflow:hidden;
+  transition:.45s ease;
+}
+
+.process-circle::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    145deg,
+    #49d357,
+    #176f31
+  );
+  opacity:0;
+  transition:.45s ease;
+}
+
+.process-circle:hover::before{
+  opacity:1;
+}
+
+.process-front,
+.process-back{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+  transition:.4s ease;
+  z-index:2;
+}
+
+.process-front{
+  opacity:1;
+}
+
+.process-circle:hover .process-front{
+  opacity:0;
+  transform:scale(.92);
+}
+
+.process-back{
+  opacity:0;
+  transform:scale(.9);
+  color:#fff;
+  font-size:28px;
+  line-height:1.08;
+  letter-spacing:-0.05em;
+  font-weight:600;
+}
+
+.process-circle:hover .process-back{
+  opacity:1;
+  transform:scale(1);
+}
+
+.process-front span{
+  font-size:84px;
+  font-weight:700;
+  color:#dbe500;
+  line-height:1;
+}
+
+.process-front h3{
+  color:#fff;
+  font-size:44px;
+  line-height:.95;
+  letter-spacing:-0.06em;
+  margin-top:16px;
+}
+
+.process-1{
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.process-2{
+  right:0;
+  top:220px;
+}
+
+.process-3{
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+}
+
+.process-4{
+  left:0;
+  top:220px;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+  .why-jmota{
+    min-height:auto;
+    padding-bottom:80px;
+  }
+
+  .why-overlay{
+    background:linear-gradient(
+      180deg,
+      rgba(244,244,244,0) 0%,
+      rgba(244,244,244,0.95) 60%,
+      rgba(244,244,244,1) 100%
+    );
+  }
+
+  .why-content{
+    width:calc(100% - 56px);
+    padding:540px 0 0;
+  }
+
+  .why-title{
+    font-size:54px;
+    text-align:center;
+    margin-bottom:46px;
+  }
+
+  .why-carousel-wrapper{
+    width:100%;
+  }
+
+  .why-indicator{
+    border-top:16px solid transparent;
+    border-bottom:16px solid transparent;
+    border-left:24px solid #176f31;
+  }
+
+  .why-carousel-track{
+    gap:24px;
+  }
+
+  .why-item{
+    font-size:22px;
+    padding-left:44px;
+  }
+
+  .warning-section{
+    padding:80px 0;
+  }
+
+  .warning-box{
+    width:calc(100% - 56px);
+    padding:60px 26px;
+    border-radius:34px;
+  }
+
+  .warning-box h2{
+    font-size:56px;
+    margin-bottom:26px;
+  }
+
+  .warning-box p{
+    font-size:22px;
+    line-height:1.02;
+    margin-bottom:36px;
+  }
+
+  .warning-btn{
+    min-height:82px;
+    font-size:22px;
+  }
+
+  .process-section{
+    padding:40px 0 100px;
+  }
+
+  .process-title{
+    font-size:54px;
+    width:calc(100% - 56px);
+    margin:0 auto 50px;
+  }
+
+  .process-wrapper{
+    width:100%;
+    height:560px;
+  }
+
+  .process-ring{
+    width:360px;
+    height:250px;
+  }
+
+  .process-ring-2{
+    width:300px;
+    height:190px;
+  }
+
+  .process-circle{
+    width:150px;
+    height:150px;
+  }
+
+  .process-front span{
+    font-size:42px;
+  }
+
+  .process-front h3{
+    font-size:20px;
+  }
+
+  .process-back{
+    font-size:13px;
+    padding:16px;
+  }
+
+  .process-1{
+    top:0;
+  }
+
+  .process-2{
+    right:10px;
+    top:180px;
+  }
+
+  .process-3{
+    bottom:0;
+  }
+
+  .process-4{
+    left:10px;
+    top:180px;
+  }
+}
+
+</style>
+
+<script>
+
+/* ========================= */
+/* CARROSSEL CONTÍNUO */
+/* ========================= */
+
+const whyItems = document.querySelectorAll(".why-item");
+
+let currentWhy = 0;
+
+setInterval(() => {
+
+  whyItems.forEach(item => {
+    item.classList.remove("active");
+  });
+
+  currentWhy++;
+
+  if(currentWhy >= 5){
+    currentWhy = 0;
+  }
+
+  whyItems[currentWhy].classList.add("active");
+
+}, 2800);
+
+</script>
