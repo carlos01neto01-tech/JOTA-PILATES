@@ -19,15 +19,9 @@
       --header-h: 116px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: "Alexandria", Arial, sans-serif;
@@ -36,10 +30,7 @@
       overflow-x: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     .site-header {
       position: fixed;
@@ -128,9 +119,7 @@
       color: #fff;
     }
 
-    .nav a:first-child {
-      font-weight: 700;
-    }
+    .nav a:first-child { font-weight: 700; }
 
     .header-cta {
       min-width: 282px;
@@ -180,9 +169,7 @@
       transform: translateY(-10px) rotate(-45deg);
     }
 
-    main {
-      padding-top: var(--header-h);
-    }
+    main { padding-top: var(--header-h); }
 
     .hero {
       min-height: 668px;
@@ -209,9 +196,7 @@
     }
 
     .green,
-    .green-mobile {
-      color: var(--verde);
-    }
+    .green-mobile { color: var(--verde); }
 
     .subtitle {
       font-size: 30px;
@@ -281,9 +266,7 @@
       color: var(--verde);
     }
 
-    .about-title {
-      margin-bottom: 44px;
-    }
+    .about-title { margin-bottom: 44px; }
 
     .about-text {
       font-size: 29px;
@@ -381,13 +364,8 @@
       grid-column: span 2;
     }
 
-    .service-card:nth-child(4) {
-      grid-column: 2 / span 2;
-    }
-
-    .service-card:nth-child(5) {
-      grid-column: 4 / span 2;
-    }
+    .service-card:nth-child(4) { grid-column: 2 / span 2; }
+    .service-card:nth-child(5) { grid-column: 4 / span 2; }
 
     .service-icon {
       width: 54px;
@@ -480,32 +458,27 @@
       font-size: 28px;
       font-weight: 700;
       text-align: center;
+      line-height: 1;
     }
 
-    .problem-item span:last-child {
+    .problem-text {
       font-size: 22px;
       line-height: 1.04;
       letter-spacing: -0.065em;
       text-align: center;
       font-weight: 300;
+      width: 100%;
+      max-width: 100%;
+      display: block;
     }
 
-    .desktop-title {
-      display: inline;
-    }
-
-    .mobile-title {
-      display: none;
-    }
+    .desktop-title { display: inline; }
+    .mobile-title { display: none; }
 
     @media (max-width: 768px) {
-      :root {
-        --header-h: 110px;
-      }
+      :root { --header-h: 110px; }
 
-      .site-header {
-        height: var(--header-h);
-      }
+      .site-header { height: var(--header-h); }
 
       .header-inner,
       .hero-content,
@@ -515,43 +488,15 @@
         width: calc(100% - 56px);
       }
 
-      .brand-mark {
-        width: 27px;
-        height: 34px;
-      }
+      .brand-mark { width: 27px; height: 34px; }
+      .brand-mark::before { width: 14px; height: 26px; left: 5px; top: 5px; }
+      .brand-mark::after { width: 8px; height: 8px; left: 14px; }
+      .brand-main { font-size: 22px; }
+      .brand-small { font-size: 8px; }
+      .brand-sub { font-size: 6px; }
 
-      .brand-mark::before {
-        width: 14px;
-        height: 26px;
-        left: 5px;
-        top: 5px;
-      }
-
-      .brand-mark::after {
-        width: 8px;
-        height: 8px;
-        left: 14px;
-      }
-
-      .brand-main {
-        font-size: 22px;
-      }
-
-      .brand-small {
-        font-size: 8px;
-      }
-
-      .brand-sub {
-        font-size: 6px;
-      }
-
-      .header-cta {
-        display: none;
-      }
-
-      .menu-button {
-        display: inline-flex;
-      }
+      .header-cta { display: none; }
+      .menu-button { display: inline-flex; }
 
       .nav {
         position: fixed;
@@ -615,13 +560,8 @@
         margin: 0 0 20px;
       }
 
-      .desktop-title {
-        display: none;
-      }
-
-      .mobile-title {
-        display: inline;
-      }
+      .desktop-title { display: none; }
+      .mobile-title { display: inline; }
 
       .subtitle {
         width: 100%;
@@ -644,9 +584,7 @@
         padding: 0 18px;
       }
 
-      .about {
-        padding: 76px 0 54px;
-      }
+      .about { padding: 76px 0 54px; }
 
       .about-inner {
         display: flex;
@@ -655,9 +593,7 @@
         gap: 28px;
       }
 
-      .about-copy {
-        display: contents;
-      }
+      .about-copy { display: contents; }
 
       .about-title {
         order: 1;
@@ -680,13 +616,9 @@
         letter-spacing: -0.075em;
       }
 
-      .benefits {
-        display: none;
-      }
+      .benefits { display: none; }
 
-      .services {
-        padding: 40px 0 84px;
-      }
+      .services { padding: 40px 0 84px; }
 
       .services .section-title {
         text-align: left;
@@ -750,26 +682,29 @@
         color: #fff;
       }
 
-      .problem-list {
-        gap: 14px;
-      }
+      .problem-list { gap: 14px; }
 
       .problem-item {
-        min-height: 88px;
-        grid-template-columns: 54px 1fr;
-        padding: 12px 22px 12px 0;
+        min-height: 92px;
+        grid-template-columns: 48px 1fr;
+        padding: 12px 18px 12px 0;
       }
 
       .problem-x {
         font-size: 24px;
+        line-height: 1;
       }
 
-      .problem-item span:last-child {
-        font-size: 18px;
-        line-height: 1.04;
+      .problem-text {
+        font-size: 19px;
+        line-height: 1.08;
         letter-spacing: -0.065em;
+        font-weight: 300;
         max-width: 92%;
+        width: 92%;
         margin: 0 auto;
+        text-align: center;
+        display: block;
       }
     }
 
@@ -781,17 +716,11 @@
         font-size: 52px;
       }
 
-      .subtitle {
-        font-size: 25px;
-      }
+      .subtitle { font-size: 25px; }
 
-      .problem-item {
-        min-height: 84px;
-      }
+      .problem-item { min-height: 92px; }
 
-      .problem-item span:last-child {
-        font-size: 17px;
-      }
+      .problem-text { font-size: 19px; }
     }
 
     @media (max-width: 390px) {
@@ -802,26 +731,18 @@
         font-size: 49px;
       }
 
-      .subtitle {
-        font-size: 23px;
-      }
+      .subtitle { font-size: 23px; }
 
-      .service-card {
-        min-height: 265px;
-      }
+      .service-card { min-height: 265px; }
 
-      .service-card h3 {
-        font-size: 25px;
-      }
+      .service-card h3 { font-size: 25px; }
 
       .service-card p {
         font-size: 15px;
         max-width: 190px;
       }
 
-      .problem-item span:last-child {
-        font-size: 16px;
-      }
+      .problem-text { font-size: 18px; }
     }
 
     @media (max-width: 375px) {
@@ -840,33 +761,19 @@
         font-size: 45px;
       }
 
-      .subtitle {
-        font-size: 21px;
-      }
+      .subtitle { font-size: 21px; }
 
-      .btn {
-        font-size: 18px;
-      }
+      .btn { font-size: 18px; }
 
-      .service-card {
-        min-height: 250px;
-      }
+      .service-card { min-height: 250px; }
 
-      .service-card h3 {
-        font-size: 23px;
-      }
+      .service-card h3 { font-size: 23px; }
 
-      .service-card p {
-        font-size: 14px;
-      }
+      .service-card p { font-size: 14px; }
 
-      .problem-item {
-        min-height: 80px;
-      }
+      .problem-item { min-height: 88px; }
 
-      .problem-item span:last-child {
-        font-size: 15px;
-      }
+      .problem-text { font-size: 17px; }
     }
   </style>
 </head>
@@ -1040,32 +947,32 @@
         <div class="problem-list">
           <div class="problem-item">
             <span class="problem-x">×</span>
-            <span>Sente dores frequentes na coluna, joelho ou articulações.</span>
+            <span class="problem-text">Sente dores frequentes na coluna, joelho ou articulações.</span>
           </div>
 
           <div class="problem-item">
             <span class="problem-x">×</span>
-            <span>Passa muito tempo sentado e percebe o corpo travado.</span>
+            <span class="problem-text">Passa muito tempo sentado e percebe o corpo travado.</span>
           </div>
 
           <div class="problem-item">
             <span class="problem-x">×</span>
-            <span>Quer melhorar postura e mobilidade.</span>
+            <span class="problem-text">Quer melhorar postura e mobilidade.</span>
           </div>
 
           <div class="problem-item">
             <span class="problem-x">×</span>
-            <span>Busca envelhecer com mais autonomia.</span>
+            <span class="problem-text">Busca envelhecer com mais autonomia.</span>
           </div>
 
           <div class="problem-item">
             <span class="problem-x">×</span>
-            <span>Precisa de exercícios seguros e bem orientados.</span>
+            <span class="problem-text">Precisa de exercícios seguros e bem orientados.</span>
           </div>
 
           <div class="problem-item">
             <span class="problem-x">×</span>
-            <span>Quer cuidar do corpo antes que a dor limite sua rotina.</span>
+            <span class="problem-text">Quer cuidar do corpo antes que a dor limite sua rotina.</span>
           </div>
         </div>
       </div>
