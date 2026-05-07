@@ -2487,12 +2487,59 @@ videoCards.forEach(card => {
   font-weight: 700;
 }
 
+<!-- ========================= -->
+<!-- SESSÃO 12 — UNIDADES -->
+<!-- ========================= -->
+
+<section class="locations-section" id="unidades">
+  <h2>Onde nos encontrar?</h2>
+
+  <div class="locations-grid">
+
+    <!-- UNIDADE 1 -->
+    <article class="location-card">
+      <div class="location-label">UNIDADE 1</div>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Mario+Clapier+Urbinatti+1600"
+         target="_blank"
+         rel="noopener">
+
+        <img src="assets/UNIDADE 1.webp" alt="Mapa Unidade 1">
+      </a>
+
+      <h3>
+        Rua Doutor Mario<br>
+        Clapier Urbinatti, 1600
+      </h3>
+    </article>
+
+    <!-- UNIDADE 2 -->
+    <article class="location-card">
+      <div class="location-label">UNIDADE 2</div>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santos+Dumont+1306"
+         target="_blank"
+         rel="noopener">
+
+        <img src="assets/UNIDADE 2.webp" alt="Mapa Unidade 2">
+      </a>
+
+      <h3>
+        Rua Santos<br>
+        Dumont, 1306
+      </h3>
+    </article>
+
+  </div>
+</section>
+
+<style>
 /* ========================= */
 /* SESSÃO 12 — UNIDADES */
 /* ========================= */
 
 .locations-section {
-  background: #fff;
+  background: #ffffff;
   padding: 24px 0 140px;
 }
 
@@ -2529,7 +2576,7 @@ videoCards.forEach(card => {
   height: 54px;
   border-radius: 999px;
   background: #176f31;
-  color: #fff;
+  color: #ffffff;
   font-size: 25px;
   line-height: 1;
   letter-spacing: -0.055em;
@@ -2537,7 +2584,13 @@ videoCards.forEach(card => {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 5;
+}
+
+.location-card a {
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
 }
 
 .location-card img {
@@ -2547,6 +2600,11 @@ videoCards.forEach(card => {
   border: 2px solid #dbe500;
   border-radius: 18px;
   display: block;
+  transition: transform .28s ease;
+}
+
+.location-card a:hover img {
+  transform: scale(1.02);
 }
 
 .location-card h3 {
@@ -2563,80 +2621,6 @@ videoCards.forEach(card => {
 /* ========================= */
 
 @media (max-width: 768px) {
-  .faq-section {
-    padding: 52px 0 58px;
-  }
-
-  .faq-inner {
-    width: calc(100% - 48px);
-  }
-
-  .faq-inner h2 {
-    font-size: 34px;
-    margin-bottom: 26px;
-  }
-
-  .faq-list {
-    gap: 12px;
-  }
-
-  .faq-question {
-    min-height: 46px;
-    padding: 0 48px 0 16px;
-    font-size: 12px;
-    letter-spacing: -0.045em;
-  }
-
-  .faq-arrow {
-    right: 20px;
-    border-left-width: 7px;
-    border-right-width: 7px;
-    border-top-width: 11px;
-    filter: drop-shadow(0 0 10px #f5f815);
-  }
-
-  .faq-item.open {
-    border-radius: 20px;
-  }
-
-  .faq-answer {
-    padding: 0 48px 0 16px;
-    font-size: 12px;
-    line-height: 1.2;
-  }
-
-  .faq-item.open .faq-answer {
-    padding: 0 48px 14px 16px;
-  }
-
-  .final-cta-section {
-    padding: 64px 0 70px;
-  }
-
-  .final-cta-box {
-    width: calc(100% - 48px);
-    min-height: 420px;
-    border-radius: 34px;
-    padding: 44px 26px;
-  }
-
-  .final-cta-box h2 {
-    font-size: 34px;
-    line-height: .94;
-    margin-bottom: 24px;
-  }
-
-  .final-cta-box p {
-    font-size: 17px;
-    line-height: 1.05;
-    margin-bottom: 34px;
-  }
-
-  .final-cta-box a {
-    min-height: 76px;
-    font-size: 17px;
-    padding: 0 18px;
-  }
 
   .locations-section {
     padding: 0 0 92px;
@@ -2644,6 +2628,7 @@ videoCards.forEach(card => {
 
   .locations-section h2 {
     font-size: 34px;
+    line-height: .96;
     margin-bottom: 74px;
   }
 
@@ -2673,12 +2658,3 @@ videoCards.forEach(card => {
   }
 }
 </style>
-
-<script>
-document.querySelectorAll(".faq-question").forEach((button) => {
-  button.addEventListener("click", () => {
-    const item = button.closest(".faq-item");
-    item.classList.toggle("open");
-  });
-});
-</script>
