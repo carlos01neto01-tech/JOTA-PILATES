@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JMota Pilates & Fisioterapia - Pilates e fisioterapia para coluna, postura e qualidade de vida." />
   <title>JMota Pilates & Fisioterapia</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,18 +20,27 @@
       --header-h: 116px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: "Alexandria", Arial, sans-serif;
       color: var(--preto);
-      background: var(--branco);
+      background: #fff;
       overflow-x: hidden;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .site-header {
       position: fixed;
@@ -49,6 +59,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 36px;
     }
 
     .brand {
@@ -57,6 +68,7 @@
       gap: 9px;
       color: #fff;
       line-height: 1;
+      flex: 0 0 auto;
     }
 
     .brand-mark {
@@ -110,16 +122,22 @@
       font-size: 8px;
       font-weight: 300;
       letter-spacing: -0.03em;
+      opacity: .92;
     }
 
     .nav {
       display: flex;
+      align-items: center;
+      justify-content: center;
       gap: 56px;
       font-size: 18px;
+      font-weight: 300;
       color: #fff;
     }
 
-    .nav a:first-child { font-weight: 700; }
+    .nav a:first-child {
+      font-weight: 700;
+    }
 
     .header-cta {
       min-width: 282px;
@@ -169,21 +187,33 @@
       transform: translateY(-10px) rotate(-45deg);
     }
 
-    main { padding-top: var(--header-h); }
+    main {
+      padding-top: var(--header-h);
+    }
 
     .hero {
       min-height: 668px;
       display: flex;
+      align-items: flex-start;
       justify-content: center;
+      overflow: hidden;
       background:
-        linear-gradient(180deg, #fff 0%, rgba(255,255,255,.96) 30%, rgba(255,255,255,.74) 64%, rgba(255,255,255,.60) 100%),
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.72) 0%,
+          rgba(255,255,255,.68) 45%,
+          rgba(255,255,255,.58) 100%
+        ),
         url("assets/hero-bg.webp") center bottom / cover no-repeat;
     }
 
     .hero-content {
       width: min(980px, calc(100% - 48px));
+      margin: 0 auto;
       padding-top: 86px;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
 
     .headline {
@@ -195,8 +225,10 @@
       margin: 0 auto 20px;
     }
 
-    .green,
-    .green-mobile { color: var(--verde); }
+    .headline .green,
+    .headline .green-mobile {
+      color: var(--verde);
+    }
 
     .subtitle {
       font-size: 30px;
@@ -242,9 +274,66 @@
       -webkit-backdrop-filter: blur(12px);
     }
 
+    .desktop-title {
+      display: inline;
+    }
+
+    .mobile-title {
+      display: none;
+    }
+
+    .marquee-strip {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 22px 0;
+      background: linear-gradient(110deg, #dbe500 0%, #cbd200 45%, #a0a500 100%);
+    }
+
+    .marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 54px;
+      width: max-content;
+      animation: marqueeMove 22s linear infinite;
+    }
+
+    .marquee-track span {
+      white-space: nowrap;
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: -0.06em;
+      font-weight: 700;
+      color: var(--verde);
+    }
+
+    .marquee-fade {
+      position: absolute;
+      top: 0;
+      width: 120px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .marquee-fade-left {
+      left: 0;
+      background: linear-gradient(90deg, #dbe500 0%, rgba(219,229,0,0) 100%);
+    }
+
+    .marquee-fade-right {
+      right: 0;
+      background: linear-gradient(270deg, #a0a500 0%, rgba(160,165,0,0) 100%);
+    }
+
+    @keyframes marqueeMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
     .about {
-      padding: 110px 0 80px;
       background: #fff;
+      padding: 110px 0 80px;
     }
 
     .about-inner {
@@ -257,8 +346,7 @@
     }
 
     .about-title,
-    .section-title,
-    .for-you-title {
+    .section-title {
       font-size: 50px;
       line-height: 1.04;
       letter-spacing: -0.075em;
@@ -266,7 +354,9 @@
       color: var(--verde);
     }
 
-    .about-title { margin-bottom: 44px; }
+    .about-title {
+      margin-bottom: 44px;
+    }
 
     .about-text {
       font-size: 29px;
@@ -303,6 +393,7 @@
     }
 
     .benefit-item {
+      width: 100%;
       min-height: 116px;
       border: 1.7px solid var(--verde);
       border-radius: 999px;
@@ -364,8 +455,13 @@
       grid-column: span 2;
     }
 
-    .service-card:nth-child(4) { grid-column: 2 / span 2; }
-    .service-card:nth-child(5) { grid-column: 4 / span 2; }
+    .service-card:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .service-card:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
 
     .service-icon {
       width: 54px;
@@ -430,10 +526,14 @@
     }
 
     .for-you-title {
-      color: #fff;
+      font-size: 50px;
+      line-height: .98;
+      letter-spacing: -0.075em;
+      font-weight: 700;
       text-align: center;
       max-width: 900px;
       margin: 0 auto 38px;
+      color: #fff;
     }
 
     .problem-list {
@@ -468,17 +568,359 @@
       text-align: center;
       font-weight: 300;
       width: 100%;
-      max-width: 100%;
       display: block;
     }
 
-    .desktop-title { display: inline; }
-    .mobile-title { display: none; }
+    .why-jmota {
+      position: relative;
+      overflow: hidden;
+      min-height: 860px;
+      background: #f4f4f4;
+    }
+
+    .why-image,
+    .why-image picture {
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+
+    .why-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .why-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(244,244,244,.98) 0%, rgba(244,244,244,.90) 30%, rgba(244,244,244,.45) 54%, rgba(244,244,244,0) 78%);
+    }
+
+    .why-content {
+      position: relative;
+      z-index: 5;
+      width: min(1200px, calc(100% - 100px));
+      margin: 0 auto;
+      padding: 120px 0;
+    }
+
+    .why-title {
+      font-size: 78px;
+      line-height: .92;
+      letter-spacing: -0.08em;
+      color: var(--verde);
+      margin-bottom: 80px;
+      font-weight: 700;
+    }
+
+    .why-title span {
+      color: var(--verde-lima);
+    }
+
+    .why-carousel-wrapper {
+      position: relative;
+      width: 1060px;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .why-indicator {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+      border-left: 28px solid var(--verde);
+      z-index: 20;
+    }
+
+    .why-carousel-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .why-item {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding-left: 64px;
+      white-space: nowrap;
+      font-size: 38px;
+      line-height: 1;
+      letter-spacing: -0.065em;
+      font-weight: 300;
+      opacity: .18;
+      transform: translateY(120px) scale(.92);
+      transition: transform .75s cubic-bezier(.22,1,.36,1), opacity .75s cubic-bezier(.22,1,.36,1);
+    }
+
+    .why-item.active {
+      opacity: 1;
+      font-weight: 700;
+      transform: translateY(120px) scale(1);
+      color: #000;
+    }
+
+    .why-item.prev {
+      opacity: .42;
+      transform: translateY(40px) scale(.95);
+    }
+
+    .why-item.next {
+      opacity: .42;
+      transform: translateY(200px) scale(.95);
+    }
+
+    .why-item.hidden {
+      opacity: 0;
+      transform: translateY(280px) scale(.88);
+    }
+
+    .warning-section {
+      padding: 120px 0;
+      background: #f4f4f4;
+    }
+
+    .warning-box {
+      width: min(1200px, calc(100% - 100px));
+      margin: 0 auto;
+      border: 2px solid var(--verde);
+      border-radius: 42px;
+      padding: 90px 80px;
+      text-align: center;
+    }
+
+    .warning-box h2 {
+      font-size: 72px;
+      line-height: .94;
+      letter-spacing: -0.08em;
+      color: var(--verde);
+      margin-bottom: 34px;
+      font-weight: 700;
+    }
+
+    .warning-box p {
+      font-size: 36px;
+      line-height: 1.06;
+      letter-spacing: -0.06em;
+      max-width: 1080px;
+      margin: 0 auto 54px;
+      font-weight: 300;
+    }
+
+    .warning-box p strong {
+      font-weight: 700;
+    }
+
+    .warning-btn {
+      width: 620px;
+      max-width: 100%;
+      min-height: 110px;
+      border-radius: 999px;
+      margin: 0 auto;
+      background: var(--verde-lima);
+      color: var(--verde);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.06em;
+    }
+
+    .process-section {
+      background: #f4f4f4;
+      padding: 60px 0 140px;
+      overflow: hidden;
+    }
+
+    .process-title {
+      text-align: center;
+      color: var(--verde);
+      font-size: 74px;
+      line-height: .94;
+      letter-spacing: -0.08em;
+      margin-bottom: 80px;
+      font-weight: 700;
+    }
+
+    .process-wrapper {
+      width: 1100px;
+      height: 760px;
+      margin: 0 auto;
+      position: relative;
+      isolation: isolate;
+      overflow: visible;
+    }
+
+    .process-ring,
+    .process-ring-2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .process-ring {
+      width: 760px;
+      height: 420px;
+      border: 5px solid var(--verde);
+    }
+
+    .process-ring-2 {
+      width: 620px;
+      height: 300px;
+      border: 4px solid rgba(23,111,49,.55);
+    }
+
+    .process-circle {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: var(--verde);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+      z-index: 5;
+      transition: transform .45s ease, box-shadow .45s ease;
+    }
+
+    .process-circle::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, #F5F815 0%, #BABC27 100%);
+      opacity: 0;
+      transition: opacity .45s ease;
+      z-index: 1;
+    }
+
+    .process-circle:hover::before,
+    .process-circle.active::before {
+      opacity: 1;
+    }
+
+    .process-circle:hover,
+    .process-circle.active {
+      transform: scale(1.04);
+      box-shadow: 0 20px 50px rgba(0,0,0,.14);
+      z-index: 20;
+    }
+
+    .process-front,
+    .process-back {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 3;
+      transition: opacity .4s ease, transform .4s ease;
+    }
+
+    .process-front {
+      padding: 28px;
+      opacity: 1;
+    }
+
+    .process-circle:hover .process-front,
+    .process-circle.active .process-front {
+      opacity: 0;
+      transform: scale(.86);
+    }
+
+    .process-back {
+      opacity: 0;
+      transform: scale(.9);
+      color: var(--verde);
+      font-size: 19px;
+      line-height: 1.08;
+      letter-spacing: -0.05em;
+      font-weight: 300;
+      width: 100%;
+      height: 100%;
+      padding: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .process-circle:hover .process-back,
+    .process-circle.active .process-back {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .process-front span {
+      font-size: 62px;
+      line-height: 1;
+      font-weight: 700;
+      color: var(--verde-lima);
+      margin-bottom: 8px;
+    }
+
+    .process-front h3 {
+      font-size: 28px;
+      line-height: .92;
+      letter-spacing: -0.065em;
+      color: #fff;
+      font-weight: 700;
+      width: 100%;
+      max-width: 170px;
+    }
+
+    .process-1 {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .process-2 {
+      right: 70px;
+      top: 210px;
+    }
+
+    .process-3 {
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+    }
+
+    .process-4 {
+      left: 70px;
+      top: 210px;
+    }
+
+    .process-1:hover,
+    .process-1.active,
+    .process-3:hover,
+    .process-3.active {
+      transform: translateX(-50%) scale(1.04);
+    }
 
     @media (max-width: 768px) {
-      :root { --header-h: 110px; }
+      :root {
+        --header-h: 110px;
+      }
 
-      .site-header { height: var(--header-h); }
+      .site-header {
+        height: var(--header-h);
+      }
 
       .header-inner,
       .hero-content,
@@ -488,15 +930,43 @@
         width: calc(100% - 56px);
       }
 
-      .brand-mark { width: 27px; height: 34px; }
-      .brand-mark::before { width: 14px; height: 26px; left: 5px; top: 5px; }
-      .brand-mark::after { width: 8px; height: 8px; left: 14px; }
-      .brand-main { font-size: 22px; }
-      .brand-small { font-size: 8px; }
-      .brand-sub { font-size: 6px; }
+      .brand-mark {
+        width: 27px;
+        height: 34px;
+      }
 
-      .header-cta { display: none; }
-      .menu-button { display: inline-flex; }
+      .brand-mark::before {
+        width: 14px;
+        height: 26px;
+        left: 5px;
+        top: 5px;
+      }
+
+      .brand-mark::after {
+        width: 8px;
+        height: 8px;
+        left: 14px;
+      }
+
+      .brand-main {
+        font-size: 22px;
+      }
+
+      .brand-small {
+        font-size: 8px;
+      }
+
+      .brand-sub {
+        font-size: 6px;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
 
       .nav {
         position: fixed;
@@ -536,7 +1006,12 @@
         min-height: auto;
         padding-bottom: 92px;
         background:
-          linear-gradient(180deg, #fff 0%, #fff 54%, rgba(255,255,255,.94) 72%, rgba(255,255,255,.70) 100%),
+          linear-gradient(
+            180deg,
+            rgba(255,255,255,.68) 0%,
+            rgba(255,255,255,.64) 48%,
+            rgba(255,255,255,.56) 100%
+          ),
           url("assets/hero-bg.webp") center bottom / cover no-repeat;
       }
 
@@ -560,8 +1035,13 @@
         margin: 0 0 20px;
       }
 
-      .desktop-title { display: none; }
-      .mobile-title { display: inline; }
+      .desktop-title {
+        display: none;
+      }
+
+      .mobile-title {
+        display: inline;
+      }
 
       .subtitle {
         width: 100%;
@@ -584,7 +1064,26 @@
         padding: 0 18px;
       }
 
-      .about { padding: 76px 0 54px; }
+      .marquee-strip {
+        padding: 18px 0;
+      }
+
+      .marquee-track {
+        gap: 34px;
+        animation-duration: 18s;
+      }
+
+      .marquee-track span {
+        font-size: 22px;
+      }
+
+      .marquee-fade {
+        width: 70px;
+      }
+
+      .about {
+        padding: 76px 0 54px;
+      }
 
       .about-inner {
         display: flex;
@@ -593,7 +1092,9 @@
         gap: 28px;
       }
 
-      .about-copy { display: contents; }
+      .about-copy {
+        display: contents;
+      }
 
       .about-title {
         order: 1;
@@ -616,9 +1117,13 @@
         letter-spacing: -0.075em;
       }
 
-      .benefits { display: none; }
+      .benefits {
+        display: none;
+      }
 
-      .services { padding: 40px 0 84px; }
+      .services {
+        padding: 40px 0 84px;
+      }
 
       .services .section-title {
         text-align: left;
@@ -626,7 +1131,6 @@
       }
 
       .services-grid {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px 14px;
       }
@@ -657,15 +1161,12 @@
 
       .service-card h3 {
         font-size: 27px;
-        line-height: .95;
-        letter-spacing: -0.075em;
         margin-bottom: 16px;
       }
 
       .service-card p {
         font-size: 16px;
         line-height: 1.02;
-        letter-spacing: -0.075em;
         max-width: 210px;
       }
 
@@ -679,10 +1180,11 @@
         max-width: 100%;
         text-align: center;
         margin: 0 auto 34px;
-        color: #fff;
       }
 
-      .problem-list { gap: 14px; }
+      .problem-list {
+        gap: 14px;
+      }
 
       .problem-item {
         min-height: 92px;
@@ -692,35 +1194,173 @@
 
       .problem-x {
         font-size: 24px;
-        line-height: 1;
       }
 
       .problem-text {
         font-size: 19px;
         line-height: 1.08;
-        letter-spacing: -0.065em;
-        font-weight: 300;
         max-width: 92%;
         width: 92%;
         margin: 0 auto;
+      }
+
+      .why-jmota {
+        min-height: 980px;
+      }
+
+      .why-image img {
+        height: 620px;
+        object-position: center top;
+      }
+
+      .why-overlay {
+        background: linear-gradient(180deg, rgba(244,244,244,0) 0%, rgba(244,244,244,.10) 38%, rgba(244,244,244,.88) 72%, rgba(244,244,244,1) 100%);
+      }
+
+      .why-content {
+        width: calc(100% - 56px);
+        padding-top: 560px;
+      }
+
+      .why-title {
+        font-size: 54px;
         text-align: center;
-        display: block;
+        margin-bottom: 46px;
       }
-    }
 
-    @media (max-width: 430px) {
-      .headline,
-      .about-title,
-      .section-title,
-      .for-you-title {
+      .why-carousel-wrapper {
+        width: 100%;
+        height: 220px;
+      }
+
+      .why-item {
+        white-space: normal;
+        font-size: 20px;
+        line-height: 1.02;
+        max-width: 90%;
+        padding-left: 44px;
+      }
+
+      .why-item.active {
+        transform: translateY(92px) scale(1);
+      }
+
+      .why-item.prev {
+        transform: translateY(22px) scale(.95);
+      }
+
+      .why-item.next {
+        transform: translateY(160px) scale(.95);
+      }
+
+      .warning-section {
+        padding: 80px 0;
+      }
+
+      .warning-box {
+        width: calc(100% - 56px);
+        padding: 60px 26px;
+        border-radius: 34px;
+      }
+
+      .warning-box h2 {
+        font-size: 56px;
+        margin-bottom: 26px;
+      }
+
+      .warning-box p {
+        font-size: 22px;
+        line-height: 1.02;
+        margin-bottom: 36px;
+      }
+
+      .warning-btn {
+        min-height: 82px;
+        font-size: 22px;
+      }
+
+      .process-section {
+        padding: 40px 0 90px;
+      }
+
+      .process-title {
         font-size: 52px;
+        width: calc(100% - 56px);
+        margin: 0 auto 44px;
       }
 
-      .subtitle { font-size: 25px; }
+      .process-wrapper {
+        width: 100%;
+        max-width: 430px;
+        height: 520px;
+      }
 
-      .problem-item { min-height: 92px; }
+      .process-ring {
+        width: 300px;
+        height: 190px;
+        border-width: 4px;
+      }
 
-      .problem-text { font-size: 19px; }
+      .process-ring-2 {
+        width: 240px;
+        height: 135px;
+        border-width: 3px;
+      }
+
+      .process-circle {
+        width: 118px;
+        height: 118px;
+      }
+
+      .process-front {
+        padding: 14px;
+      }
+
+      .process-back {
+        font-size: 10px;
+        line-height: 1.04;
+        padding: 13px;
+      }
+
+      .process-front span {
+        font-size: 34px;
+        margin-bottom: 3px;
+      }
+
+      .process-front h3 {
+        font-size: 14px;
+        line-height: .9;
+        max-width: 86px;
+      }
+
+      .process-1 {
+        top: 52px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .process-2 {
+        top: 185px;
+        right: 10px;
+      }
+
+      .process-3 {
+        bottom: 52px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .process-4 {
+        top: 185px;
+        left: 10px;
+      }
+
+      .process-1:hover,
+      .process-1.active,
+      .process-3:hover,
+      .process-3.active {
+        transform: translateX(-50%) scale(1.04);
+      }
     }
 
     @media (max-width: 390px) {
@@ -731,18 +1371,26 @@
         font-size: 49px;
       }
 
-      .subtitle { font-size: 23px; }
+      .subtitle {
+        font-size: 23px;
+      }
 
-      .service-card { min-height: 265px; }
+      .service-card {
+        min-height: 265px;
+      }
 
-      .service-card h3 { font-size: 25px; }
+      .service-card h3 {
+        font-size: 25px;
+      }
 
       .service-card p {
         font-size: 15px;
         max-width: 190px;
       }
 
-      .problem-text { font-size: 18px; }
+      .problem-text {
+        font-size: 18px;
+      }
     }
 
     @media (max-width: 375px) {
@@ -761,19 +1409,33 @@
         font-size: 45px;
       }
 
-      .subtitle { font-size: 21px; }
+      .subtitle {
+        font-size: 21px;
+      }
 
-      .btn { font-size: 18px; }
+      .btn {
+        font-size: 18px;
+      }
 
-      .service-card { min-height: 250px; }
+      .service-card {
+        min-height: 250px;
+      }
 
-      .service-card h3 { font-size: 23px; }
+      .service-card h3 {
+        font-size: 23px;
+      }
 
-      .service-card p { font-size: 14px; }
+      .service-card p {
+        font-size: 14px;
+      }
 
-      .problem-item { min-height: 88px; }
+      .problem-item {
+        min-height: 88px;
+      }
 
-      .problem-text { font-size: 17px; }
+      .problem-text {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
@@ -836,6 +1498,25 @@
           </a>
         </div>
       </div>
+    </section>
+
+    <section class="marquee-strip">
+      <div class="marquee-fade marquee-fade-left"></div>
+      <div class="marquee-track">
+        <span>Atendimento humanizado</span>
+        <span>Pilates clínico</span>
+        <span>Fisioterapia especializada</span>
+        <span>Postura e mobilidade</span>
+        <span>Cuidado individualizado</span>
+        <span>Alívio de dores</span>
+        <span>Atendimento humanizado</span>
+        <span>Pilates clínico</span>
+        <span>Fisioterapia especializada</span>
+        <span>Postura e mobilidade</span>
+        <span>Cuidado individualizado</span>
+        <span>Alívio de dores</span>
+      </div>
+      <div class="marquee-fade marquee-fade-right"></div>
     </section>
 
     <section class="about" id="sobre">
@@ -977,6 +1658,102 @@
         </div>
       </div>
     </section>
+
+    <section class="why-jmota">
+      <div class="why-image">
+        <picture>
+          <source media="(max-width:768px)" srcset="assets/fisioterapeuta-mobile.webp">
+          <img src="assets/fisioterapeuta.webp" alt="Especialista JMota Pilates">
+        </picture>
+      </div>
+
+      <div class="why-overlay"></div>
+
+      <div class="why-content">
+        <h2 class="why-title">
+          Por que escolher<br>
+          a <span>J.Mota?</span>
+        </h2>
+
+        <div class="why-carousel-wrapper">
+          <div class="why-indicator"></div>
+
+          <div class="why-carousel-track">
+            <div class="why-item">Atendimento próximo e individualizado.</div>
+            <div class="why-item">Exercícios adaptados para cada necessidade.</div>
+            <div class="why-item">Ambiente acolhedor e seguro.</div>
+            <div class="why-item">Acompanhamento durante a prática.</div>
+            <div class="why-item">Cuidado para jovens, adultos e idosos.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="warning-section">
+      <div class="warning-box">
+        <h2>Seu corpo dá sinais antes de parar.</h2>
+
+        <p>
+          <strong>A dor no joelho, a lombar travada, a postura cansada e a falta de disposição</strong>
+          não aparecem do nada. Muitas vezes, são sinais de que o corpo precisa de atenção,
+          fortalecimento e movimento correto. Cuidar agora é evitar que pequenos incômodos
+          virem grandes limitações.
+        </p>
+
+        <a href="https://wa.me/5544998322107" target="_blank" rel="noopener" class="warning-btn">
+          Agendar avaliação pelo WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <h2 class="process-title">Nosso processo de atendimento</h2>
+
+      <div class="process-wrapper">
+        <div class="process-ring"></div>
+        <div class="process-ring process-ring-2"></div>
+
+        <div class="process-circle process-1">
+          <div class="process-front">
+            <span>01</span>
+            <h3>Avaliação<br>inicial</h3>
+          </div>
+          <div class="process-back">
+            Entendemos suas dores, rotina e limitações para iniciar o tratamento correto.
+          </div>
+        </div>
+
+        <div class="process-circle process-2">
+          <div class="process-front">
+            <span>02</span>
+            <h3>Plano de<br>cuidado</h3>
+          </div>
+          <div class="process-back">
+            Criamos exercícios personalizados conforme sua necessidade e evolução.
+          </div>
+        </div>
+
+        <div class="process-circle process-3">
+          <div class="process-front">
+            <span>03</span>
+            <h3>Suporte</h3>
+          </div>
+          <div class="process-back">
+            Ajustamos os movimentos e acompanhamos cada etapa do processo.
+          </div>
+        </div>
+
+        <div class="process-circle process-4">
+          <div class="process-front">
+            <span>04</span>
+            <h3>Evolução<br>contínua</h3>
+          </div>
+          <div class="process-back">
+            Mantemos constância, mobilidade e qualidade de vida no longo prazo.
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script>
@@ -995,1018 +1772,47 @@
         nav.classList.remove("active");
       });
     });
+
+    const whyItems = document.querySelectorAll(".why-item");
+    let current = 0;
+
+    function updateWhyCarousel() {
+      whyItems.forEach(item => {
+        item.classList.remove("active", "prev", "next", "hidden");
+      });
+
+      const prev = (current - 1 + whyItems.length) % whyItems.length;
+      const next = (current + 1) % whyItems.length;
+
+      whyItems[current].classList.add("active");
+      whyItems[prev].classList.add("prev");
+      whyItems[next].classList.add("next");
+
+      whyItems.forEach((item, index) => {
+        if (index !== current && index !== prev && index !== next) {
+          item.classList.add("hidden");
+        }
+      });
+    }
+
+    updateWhyCarousel();
+
+    setInterval(() => {
+      current = (current + 1) % whyItems.length;
+      updateWhyCarousel();
+    }, 2600);
+
+    const processCircles = document.querySelectorAll(".process-circle");
+
+    processCircles.forEach(circle => {
+      circle.addEventListener("click", () => {
+        processCircles.forEach(item => {
+          if (item !== circle) item.classList.remove("active");
+        });
+
+        circle.classList.toggle("active");
+      });
+    });
   </script>
 </body>
 </html>
-
-<!-- ========================= -->
-<!-- SESSÃO 5 -->
-<!-- ========================= -->
-
-<section class="why-jmota">
-
-  <div class="why-image">
-    <img src="assets/fisioterapeuta.webp" alt="Especialista JMota Pilates">
-  </div>
-
-  <div class="why-overlay"></div>
-
-  <div class="why-content">
-
-    <h2 class="why-title">
-      Por que escolher<br>
-      a <span>J.Mota?</span>
-    </h2>
-
-    <div class="why-carousel-wrapper">
-
-      <div class="why-indicator"></div>
-
-      <div class="why-carousel-track">
-
-        <div class="why-item active">
-          Atendimento próximo e individualizado.
-        </div>
-
-        <div class="why-item">
-          Exercícios adaptados para cada necessidade.
-        </div>
-
-        <div class="why-item">
-          Ambiente acolhedor e seguro.
-        </div>
-
-        <div class="why-item">
-          Acompanhamento durante a prática.
-        </div>
-
-        <div class="why-item">
-          Cuidado para jovens, adultos e idosos.
-        </div>
-
-        <!-- DUPLICAÇÃO PRA LOOP CONTÍNUO -->
-        <div class="why-item">
-          Atendimento próximo e individualizado.
-        </div>
-
-        <div class="why-item">
-          Exercícios adaptados para cada necessidade.
-        </div>
-
-        <div class="why-item">
-          Ambiente acolhedor e seguro.
-        </div>
-
-        <div class="why-item">
-          Acompanhamento durante a prática.
-        </div>
-
-        <div class="why-item">
-          Cuidado para jovens, adultos e idosos.
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= -->
-<!-- SESSÃO 6 -->
-<!-- ========================= -->
-
-<section class="warning-section">
-
-  <div class="warning-box">
-
-    <h2>
-      Seu corpo dá sinais antes de parar.
-    </h2>
-
-    <p>
-      <strong>
-        A dor no joelho, a lombar travada, a postura cansada e a falta de disposição
-      </strong>
-
-      não aparecem do nada. Muitas vezes, são sinais de que o corpo precisa de atenção,
-      fortalecimento e movimento correto. Cuidar agora é evitar que pequenos incômodos
-      virem grandes limitações.
-    </p>
-
-    <a href="https://wa.me/5544998322107" class="warning-btn">
-      Agendar avaliação pelo WhatsApp
-    </a>
-
-  </div>
-</section>
-
-<!-- ========================= -->
-<!-- SESSÃO 7 -->
-<!-- ========================= -->
-
-<section class="process-section">
-
-  <h2 class="process-title">
-    Nosso processo de atendimento
-  </h2>
-
-  <div class="process-wrapper">
-
-    <div class="process-circle process-1">
-      <div class="process-front">
-        <span>01</span>
-        <h3>Avaliação inicial</h3>
-      </div>
-
-      <div class="process-back">
-        Entendemos suas dores, rotina e limitações para iniciar o tratamento correto.
-      </div>
-    </div>
-
-    <div class="process-circle process-2">
-      <div class="process-front">
-        <span>02</span>
-        <h3>Plano de cuidado</h3>
-      </div>
-
-      <div class="process-back">
-        Criamos exercícios personalizados conforme sua necessidade e evolução.
-      </div>
-    </div>
-
-    <div class="process-circle process-3">
-      <div class="process-front">
-        <span>03</span>
-        <h3>Suporte</h3>
-      </div>
-
-      <div class="process-back">
-        Ajustamos os movimentos e acompanhamos cada etapa do processo.
-      </div>
-    </div>
-
-    <div class="process-circle process-4">
-      <div class="process-front">
-        <span>04</span>
-        <h3>Evolução contínua</h3>
-      </div>
-
-      <div class="process-back">
-        O objetivo é manter constância, mobilidade e qualidade de vida no longo prazo.
-      </div>
-    </div>
-
-    <div class="process-ring"></div>
-    <div class="process-ring process-ring-2"></div>
-
-  </div>
-</section>
-
-<style>
-
-<!-- ===================================================== -->
-<!-- SESSÃO 5 - POR QUE ESCOLHER -->
-<!-- ===================================================== -->
-
-<section class="why-jmota">
-
-  <div class="why-image">
-    <img src="assets/fisioterapeuta.webp" alt="Especialista JMota Pilates">
-  </div>
-
-  <div class="why-overlay"></div>
-
-  <div class="why-content">
-
-    <h2 class="why-title">
-      Por que escolher<br>
-      a <span>J.Mota?</span>
-    </h2>
-
-    <div class="why-carousel-wrapper">
-
-      <div class="why-indicator"></div>
-
-      <div class="why-carousel-track">
-
-        <div class="why-item active">
-          Atendimento próximo e individualizado.
-        </div>
-
-        <div class="why-item">
-          Exercícios adaptados para cada necessidade.
-        </div>
-
-        <div class="why-item">
-          Ambiente acolhedor e seguro.
-        </div>
-
-        <div class="why-item">
-          Acompanhamento durante a prática.
-        </div>
-
-        <div class="why-item">
-          Cuidado para jovens, adultos e idosos.
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================== -->
-<!-- SESSÃO 6 -->
-<!-- ===================================================== -->
-
-<section class="warning-section">
-
-  <div class="warning-box">
-
-    <h2>
-      Seu corpo dá sinais antes de parar.
-    </h2>
-
-    <p>
-      <strong>
-        A dor no joelho, a lombar travada, a postura cansada e a falta de disposição
-      </strong>
-
-      não aparecem do nada. Muitas vezes, são sinais de que o corpo precisa de atenção,
-      fortalecimento e movimento correto. Cuidar agora é evitar que pequenos incômodos
-      virem grandes limitações.
-    </p>
-
-    <a href="https://wa.me/5544998322107" class="warning-btn">
-      Agendar avaliação pelo WhatsApp
-    </a>
-
-  </div>
-</section>
-
-<!-- ===================================================== -->
-<!-- SESSÃO 7 -->
-<!-- ===================================================== -->
-
-<section class="process-section">
-
-  <h2 class="process-title">
-    Nosso processo de atendimento
-  </h2>
-
-  <div class="process-wrapper">
-
-    <div class="process-circle process-1">
-
-      <div class="process-front">
-        <span>01</span>
-        <h3>Avaliação inicial</h3>
-      </div>
-
-      <div class="process-back">
-        Entendemos suas dores, rotina e limitações para iniciar o tratamento correto.
-      </div>
-
-    </div>
-
-    <div class="process-circle process-2">
-
-      <div class="process-front">
-        <span>02</span>
-        <h3>Plano de cuidado</h3>
-      </div>
-
-      <div class="process-back">
-        Criamos exercícios personalizados conforme sua necessidade e evolução.
-      </div>
-
-    </div>
-
-    <div class="process-circle process-3">
-
-      <div class="process-front">
-        <span>03</span>
-        <h3>Acompanhamento</h3>
-      </div>
-
-      <div class="process-back">
-        Ajustamos os movimentos e acompanhamos cada etapa do processo.
-      </div>
-
-    </div>
-
-    <div class="process-circle process-4">
-
-      <div class="process-front">
-        <span>04</span>
-        <h3>Evolução contínua</h3>
-      </div>
-
-      <div class="process-back">
-        O objetivo é manter constância, mobilidade e qualidade de vida no longo prazo.
-      </div>
-
-    </div>
-
-    <div class="process-ring"></div>
-    <div class="process-ring process-ring-2"></div>
-
-  </div>
-</section>
-
-<!-- ===================================================== -->
-<!-- SESSÃO 5 -->
-<!-- ===================================================== -->
-
-<section class="why-jmota">
-  <div class="why-image">
-    <picture>
-      <source media="(max-width:768px)" srcset="assets/fisioterapeuta-mobile.webp">
-      <img src="assets/fisioterapeuta.webp" alt="Especialista JMota Pilates">
-    </picture>
-  </div>
-
-  <div class="why-overlay"></div>
-
-  <div class="why-content">
-    <h2 class="why-title">
-      Por que escolher<br>
-      a <span>J.Mota?</span>
-    </h2>
-
-    <div class="why-carousel-wrapper">
-      <div class="why-indicator"></div>
-
-      <div class="why-carousel-track">
-        <div class="why-item">Atendimento próximo e individualizado.</div>
-        <div class="why-item">Exercícios adaptados para cada necessidade.</div>
-        <div class="why-item">Ambiente acolhedor e seguro.</div>
-        <div class="why-item">Acompanhamento durante a prática.</div>
-        <div class="why-item">Cuidado para jovens, adultos e idosos.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================== -->
-<!-- SESSÃO 6 -->
-<!-- ===================================================== -->
-
-<section class="warning-section">
-  <div class="warning-box">
-    <h2>Seu corpo dá sinais antes de parar.</h2>
-
-    <p>
-      <strong>A dor no joelho, a lombar travada, a postura cansada e a falta de disposição</strong>
-      não aparecem do nada. Muitas vezes, são sinais de que o corpo precisa de atenção,
-      fortalecimento e movimento correto. Cuidar agora é evitar que pequenos incômodos
-      virem grandes limitações.
-    </p>
-
-    <a href="https://wa.me/5544998322107" target="_blank" rel="noopener" class="warning-btn">
-      Agendar avaliação pelo WhatsApp
-    </a>
-  </div>
-</section>
-
-<!-- ===================================================== -->
-<!-- SESSÃO 7 -->
-<!-- ===================================================== -->
-
-<section class="process-section">
-  <h2 class="process-title">Nosso processo de atendimento</h2>
-
-  <div class="process-wrapper">
-    <div class="process-ring"></div>
-    <div class="process-ring process-ring-2"></div>
-
-    <div class="process-circle process-1">
-      <div class="process-front">
-        <span>01</span>
-        <h3>Avaliação<br>inicial</h3>
-      </div>
-      <div class="process-back">
-        Entendemos suas dores, rotina e limitações para iniciar o tratamento correto.
-      </div>
-    </div>
-
-    <div class="process-circle process-2">
-      <div class="process-front">
-        <span>02</span>
-        <h3>Plano de<br>cuidado</h3>
-      </div>
-      <div class="process-back">
-        Criamos exercícios personalizados conforme sua necessidade e evolução.
-      </div>
-    </div>
-
-    <div class="process-circle process-3">
-      <div class="process-front">
-        <span>03</span>
-        <h3>Acompa-<br>nhamento</h3>
-      </div>
-      <div class="process-back">
-        Ajustamos os movimentos e acompanhamos cada etapa do processo.
-      </div>
-    </div>
-
-    <div class="process-circle process-4">
-      <div class="process-front">
-        <span>04</span>
-        <h3>Evolução<br>contínua</h3>
-      </div>
-      <div class="process-back">
-        Mantemos constância, mobilidade e qualidade de vida no longo prazo.
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-/* IMAGEM DA SESSÃO 5 */
-
-.why-jmota {
-  position: relative;
-  overflow: hidden;
-  min-height: 860px;
-  background: #f4f4f4;
-}
-
-.why-image,
-.why-image picture {
-  position: absolute;
-  inset: 0;
-  display: block;
-}
-
-.why-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-.why-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(244,244,244,.98) 0%,
-    rgba(244,244,244,.90) 30%,
-    rgba(244,244,244,.45) 54%,
-    rgba(244,244,244,0) 78%
-  );
-}
-
-.why-content {
-  position: relative;
-  z-index: 5;
-  width: min(1200px, calc(100% - 100px));
-  margin: 0 auto;
-  padding: 120px 0;
-}
-
-.why-title {
-  font-size: 78px;
-  line-height: .92;
-  letter-spacing: -0.08em;
-  color: #176f31;
-  margin-bottom: 80px;
-  font-weight: 700;
-}
-
-.why-title span {
-  color: #dbe500;
-}
-
-/* CARROSSEL */
-
-.why-carousel-wrapper {
-  position: relative;
-  width: 1060px;
-  height: 300px;
-  overflow: hidden;
-}
-
-.why-indicator {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  border-left: 28px solid #176f31;
-  z-index: 20;
-}
-
-.why-carousel-track {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.why-item {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding-left: 64px;
-  white-space: nowrap;
-  font-size: 38px;
-  line-height: 1;
-  letter-spacing: -0.065em;
-  font-weight: 300;
-  opacity: .18;
-  transform: translateY(120px) scale(.92);
-  transition: transform .75s cubic-bezier(.22,1,.36,1), opacity .75s cubic-bezier(.22,1,.36,1);
-}
-
-.why-item.active {
-  opacity: 1;
-  font-weight: 700;
-  transform: translateY(120px) scale(1);
-  color: #000;
-}
-
-.why-item.prev {
-  opacity: .42;
-  transform: translateY(40px) scale(.95);
-}
-
-.why-item.next {
-  opacity: .42;
-  transform: translateY(200px) scale(.95);
-}
-
-.why-item.hidden {
-  opacity: 0;
-  transform: translateY(280px) scale(.88);
-}
-
-/* SESSÃO 6 */
-
-.warning-section {
-  padding: 120px 0;
-  background: #f4f4f4;
-}
-
-.warning-box {
-  width: min(1200px, calc(100% - 100px));
-  margin: 0 auto;
-  border: 2px solid #176f31;
-  border-radius: 42px;
-  padding: 90px 80px;
-  text-align: center;
-}
-
-.warning-box h2 {
-  font-size: 72px;
-  line-height: .94;
-  letter-spacing: -0.08em;
-  color: #176f31;
-  margin-bottom: 34px;
-  font-weight: 700;
-}
-
-.warning-box p {
-  font-size: 36px;
-  line-height: 1.06;
-  letter-spacing: -0.06em;
-  max-width: 1080px;
-  margin: 0 auto 54px;
-  font-weight: 300;
-}
-
-.warning-box p strong {
-  font-weight: 700;
-}
-
-.warning-btn {
-  width: 620px;
-  max-width: 100%;
-  min-height: 110px;
-  border-radius: 999px;
-  margin: 0 auto;
-  background: #dbe500;
-  color: #176f31;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: -0.06em;
-}
-
-/* SESSÃO 7 */
-
-.process-section {
-  background: #f4f4f4;
-  padding: 60px 0 140px;
-  overflow: hidden;
-}
-
-.process-title {
-  text-align: center;
-  color: #176f31;
-  font-size: 74px;
-  line-height: .94;
-  letter-spacing: -0.08em;
-  margin-bottom: 80px;
-  font-weight: 700;
-}
-
-.process-wrapper {
-  width: 1100px;
-  height: 760px;
-  margin: 0 auto;
-  position: relative;
-  isolation: isolate;
-  overflow: visible;
-}
-
-.process-ring,
-.process-ring-2 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.process-ring {
-  width: 760px;
-  height: 420px;
-  border: 5px solid #176f31;
-}
-
-.process-ring-2 {
-  width: 620px;
-  height: 300px;
-  border: 4px solid rgba(23,111,49,.55);
-}
-
-.process-circle {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: #176f31;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 5;
-  transition: transform .45s ease, box-shadow .45s ease;
-}
-
-.process-circle::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(145deg, #F5F815 0%, #BABC27 100%);
-  opacity: 0;
-  transition: opacity .45s ease;
-  z-index: 1;
-}
-
-.process-circle:hover::before,
-.process-circle.active::before {
-  opacity: 1;
-}
-
-.process-circle:hover,
-.process-circle.active {
-  transform: scale(1.04);
-  box-shadow: 0 20px 50px rgba(0,0,0,.14);
-  z-index: 20;
-}
-
-.process-front,
-.process-back {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 3;
-  transition: opacity .4s ease, transform .4s ease;
-}
-
-.process-front {
-  padding: 28px;
-  opacity: 1;
-}
-
-.process-circle:hover .process-front,
-.process-circle.active .process-front {
-  opacity: 0;
-  transform: scale(.86);
-}
-
-.process-back {
-  opacity: 0;
-  transform: scale(.9);
-  color: #176f31;
-  font-size: 19px;
-  line-height: 1.08;
-  letter-spacing: -0.05em;
-  font-weight: 300;
-  width: 100%;
-  height: 100%;
-  padding: 34px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.process-circle:hover .process-back,
-.process-circle.active .process-back {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.process-front span {
-  font-size: 62px;
-  line-height: 1;
-  font-weight: 700;
-  color: #dbe500;
-  margin-bottom: 8px;
-}
-
-.process-front h3 {
-  font-size: 28px;
-  line-height: .92;
-  letter-spacing: -0.065em;
-  color: #fff;
-  font-weight: 700;
-  width: 100%;
-  max-width: 170px;
-  overflow-wrap: normal;
-  word-break: normal;
-}
-
-.process-3 .process-front h3 {
-  font-size: 27px;
-  line-height: .9;
-  max-width: 170px;
-}
-
-.process-1 {
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.process-2 {
-  right: 70px;
-  top: 210px;
-}
-
-.process-3 {
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
-}
-
-.process-4 {
-  left: 70px;
-  top: 210px;
-}
-
-.process-1:hover,
-.process-1.active {
-  transform: translateX(-50%) scale(1.04);
-}
-
-.process-3:hover,
-.process-3.active {
-  transform: translateX(-50%) scale(1.04);
-}
-
-/* MOBILE */
-
-@media(max-width:768px) {
-  .why-jmota {
-    min-height: 980px;
-  }
-
-  .why-image img {
-    height: 620px;
-    object-position: center top;
-  }
-
-  .why-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(244,244,244,0) 0%,
-      rgba(244,244,244,.10) 38%,
-      rgba(244,244,244,.88) 72%,
-      rgba(244,244,244,1) 100%
-    );
-  }
-
-  .why-content {
-    width: calc(100% - 56px);
-    padding-top: 560px;
-  }
-
-  .why-title {
-    font-size: 54px;
-    text-align: center;
-    margin-bottom: 46px;
-  }
-
-  .why-carousel-wrapper {
-    width: 100%;
-    height: 220px;
-  }
-
-  .why-item {
-    white-space: normal;
-    font-size: 20px;
-    line-height: 1.02;
-    max-width: 90%;
-    padding-left: 44px;
-  }
-
-  .why-item.active {
-    transform: translateY(92px) scale(1);
-  }
-
-  .why-item.prev {
-    transform: translateY(22px) scale(.95);
-  }
-
-  .why-item.next {
-    transform: translateY(160px) scale(.95);
-  }
-
-  .warning-section {
-    padding: 80px 0;
-  }
-
-  .warning-box {
-    width: calc(100% - 56px);
-    padding: 60px 26px;
-    border-radius: 34px;
-  }
-
-  .warning-box h2 {
-    font-size: 56px;
-    margin-bottom: 26px;
-  }
-
-  .warning-box p {
-    font-size: 22px;
-    line-height: 1.02;
-    margin-bottom: 36px;
-  }
-
-  .warning-btn {
-    min-height: 82px;
-    font-size: 22px;
-  }
-
-  .process-section {
-    padding: 40px 0 90px;
-  }
-
-  .process-title {
-    font-size: 52px;
-    width: calc(100% - 56px);
-    margin: 0 auto 44px;
-  }
-
-  .process-wrapper {
-    width: 100%;
-    max-width: 430px;
-    height: 520px;
-    margin: 0 auto;
-  }
-
-  .process-ring {
-    width: 300px;
-    height: 190px;
-    border-width: 4px;
-  }
-
-  .process-ring-2 {
-    width: 240px;
-    height: 135px;
-    border-width: 3px;
-  }
-
-  .process-circle {
-    width: 118px;
-    height: 118px;
-  }
-
-  .process-front {
-    padding: 14px;
-  }
-
-  .process-back {
-    font-size: 10px;
-    line-height: 1.04;
-    padding: 13px;
-  }
-
-  .process-front span {
-    font-size: 34px;
-    margin-bottom: 3px;
-  }
-
-  .process-front h3 {
-    font-size: 14px;
-    line-height: .9;
-    max-width: 86px;
-  }
-
-  .process-3 .process-front h3 {
-    font-size: 13px;
-    line-height: .88;
-    max-width: 90px;
-  }
-
-  .process-1 {
-    top: 52px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .process-2 {
-    top: 185px;
-    right: 10px;
-  }
-
-  .process-3 {
-    bottom: 52px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .process-4 {
-    top: 185px;
-    left: 10px;
-  }
-
-  .process-1:hover,
-  .process-1.active {
-    transform: translateX(-50%) scale(1.04);
-  }
-
-  .process-3:hover,
-  .process-3.active {
-    transform: translateX(-50%) scale(1.04);
-  }
-}
-</style>
-
-<script>
-const whyItems = document.querySelectorAll(".why-item");
-let current = 0;
-
-function updateWhyCarousel() {
-  whyItems.forEach(item => {
-    item.classList.remove("active", "prev", "next", "hidden");
-  });
-
-  const prev = (current - 1 + whyItems.length) % whyItems.length;
-  const next = (current + 1) % whyItems.length;
-
-  whyItems[current].classList.add("active");
-  whyItems[prev].classList.add("prev");
-  whyItems[next].classList.add("next");
-
-  whyItems.forEach((item, index) => {
-    if (index !== current && index !== prev && index !== next) {
-      item.classList.add("hidden");
-    }
-  });
-}
-
-updateWhyCarousel();
-
-setInterval(() => {
-  current = (current + 1) % whyItems.length;
-  updateWhyCarousel();
-}, 2600);
-
-const processCircles = document.querySelectorAll(".process-circle");
-
-processCircles.forEach(circle => {
-  circle.addEventListener("click", () => {
-    processCircles.forEach(item => {
-      if (item !== circle) item.classList.remove("active");
-    });
-
-    circle.classList.toggle("active");
-  });
-});
-</script>
