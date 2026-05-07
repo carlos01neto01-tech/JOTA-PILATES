@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JMota Pilates & Fisioterapia - Pilates e fisioterapia para coluna, postura e qualidade de vida." />
   <title>JMota Pilates & Fisioterapia</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -17,6 +16,7 @@
       --verde-lima: #dbe500;
       --preto: #303033;
       --branco: #ffffff;
+      --cinza-bg: #f4f4f4;
       --header-h: 116px;
     }
 
@@ -33,7 +33,7 @@
     body {
       font-family: "Alexandria", Arial, sans-serif;
       color: var(--preto);
-      background: #fff;
+      background: var(--branco);
       overflow-x: hidden;
     }
 
@@ -200,9 +200,9 @@
       background:
         linear-gradient(
           180deg,
-          rgba(255,255,255,.72) 0%,
-          rgba(255,255,255,.68) 45%,
-          rgba(255,255,255,.58) 100%
+          rgba(255,255,255,.58) 0%,
+          rgba(255,255,255,.52) 45%,
+          rgba(255,255,255,.45) 100%
         ),
         url("assets/hero-bg.webp") center bottom / cover no-repeat;
     }
@@ -225,8 +225,8 @@
       margin: 0 auto 20px;
     }
 
-    .headline .green,
-    .headline .green-mobile {
+    .green,
+    .green-mobile {
       color: var(--verde);
     }
 
@@ -346,9 +346,13 @@
     }
 
     .about-title,
-    .section-title {
+    .section-title,
+    .for-you-title,
+    .why-title,
+    .warning-box h2,
+    .process-title {
       font-size: 50px;
-      line-height: 1.04;
+      line-height: .96;
       letter-spacing: -0.075em;
       font-weight: 700;
       color: var(--verde);
@@ -526,10 +530,6 @@
     }
 
     .for-you-title {
-      font-size: 50px;
-      line-height: .98;
-      letter-spacing: -0.075em;
-      font-weight: 700;
       text-align: center;
       max-width: 900px;
       margin: 0 auto 38px;
@@ -574,8 +574,8 @@
     .why-jmota {
       position: relative;
       overflow: hidden;
-      min-height: 860px;
-      background: #f4f4f4;
+      min-height: 760px;
+      background: var(--cinza-bg);
     }
 
     .why-image,
@@ -608,12 +608,7 @@
     }
 
     .why-title {
-      font-size: 78px;
-      line-height: .92;
-      letter-spacing: -0.08em;
-      color: var(--verde);
-      margin-bottom: 80px;
-      font-weight: 700;
+      margin-bottom: 70px;
     }
 
     .why-title span {
@@ -652,7 +647,7 @@
       width: 100%;
       padding-left: 64px;
       white-space: nowrap;
-      font-size: 38px;
+      font-size: 36px;
       line-height: 1;
       letter-spacing: -0.065em;
       font-weight: 300;
@@ -684,8 +679,8 @@
     }
 
     .warning-section {
-      padding: 120px 0;
-      background: #f4f4f4;
+      padding: 100px 0;
+      background: var(--cinza-bg);
     }
 
     .warning-box {
@@ -693,25 +688,20 @@
       margin: 0 auto;
       border: 2px solid var(--verde);
       border-radius: 42px;
-      padding: 90px 80px;
+      padding: 80px 70px;
       text-align: center;
     }
 
     .warning-box h2 {
-      font-size: 72px;
-      line-height: .94;
-      letter-spacing: -0.08em;
-      color: var(--verde);
-      margin-bottom: 34px;
-      font-weight: 700;
+      margin-bottom: 30px;
     }
 
     .warning-box p {
-      font-size: 36px;
+      font-size: 30px;
       line-height: 1.06;
       letter-spacing: -0.06em;
       max-width: 1080px;
-      margin: 0 auto 54px;
+      margin: 0 auto 50px;
       font-weight: 300;
     }
 
@@ -722,7 +712,7 @@
     .warning-btn {
       width: 620px;
       max-width: 100%;
-      min-height: 110px;
+      min-height: 92px;
       border-radius: 999px;
       margin: 0 auto;
       background: var(--verde-lima);
@@ -730,25 +720,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 34px;
+      font-size: 28px;
       font-weight: 700;
       letter-spacing: -0.06em;
     }
 
     .process-section {
-      background: #f4f4f4;
-      padding: 60px 0 140px;
+      background: var(--cinza-bg);
+      padding: 70px 0 130px;
       overflow: hidden;
     }
 
     .process-title {
       text-align: center;
-      color: var(--verde);
-      font-size: 74px;
-      line-height: .94;
-      letter-spacing: -0.08em;
-      margin-bottom: 80px;
-      font-weight: 700;
+      margin-bottom: 70px;
     }
 
     .process-wrapper {
@@ -1008,9 +993,9 @@
         background:
           linear-gradient(
             180deg,
-            rgba(255,255,255,.68) 0%,
-            rgba(255,255,255,.64) 48%,
-            rgba(255,255,255,.56) 100%
+            rgba(255,255,255,.54) 0%,
+            rgba(255,255,255,.50) 48%,
+            rgba(255,255,255,.46) 100%
           ),
           url("assets/hero-bg.webp") center bottom / cover no-repeat;
       }
@@ -1023,7 +1008,10 @@
       .headline,
       .about-title,
       .section-title,
-      .for-you-title {
+      .for-you-title,
+      .why-title,
+      .warning-box h2,
+      .process-title {
         font-size: 52px;
         line-height: .96;
         letter-spacing: -0.082em;
@@ -1223,7 +1211,6 @@
       }
 
       .why-title {
-        font-size: 54px;
         text-align: center;
         margin-bottom: 46px;
       }
@@ -1263,11 +1250,6 @@
         border-radius: 34px;
       }
 
-      .warning-box h2 {
-        font-size: 56px;
-        margin-bottom: 26px;
-      }
-
       .warning-box p {
         font-size: 22px;
         line-height: 1.02;
@@ -1284,7 +1266,6 @@
       }
 
       .process-title {
-        font-size: 52px;
         width: calc(100% - 56px);
         margin: 0 auto 44px;
       }
@@ -1367,29 +1348,15 @@
       .headline,
       .about-title,
       .section-title,
-      .for-you-title {
+      .for-you-title,
+      .why-title,
+      .warning-box h2,
+      .process-title {
         font-size: 49px;
       }
 
       .subtitle {
         font-size: 23px;
-      }
-
-      .service-card {
-        min-height: 265px;
-      }
-
-      .service-card h3 {
-        font-size: 25px;
-      }
-
-      .service-card p {
-        font-size: 15px;
-        max-width: 190px;
-      }
-
-      .problem-text {
-        font-size: 18px;
       }
     }
 
@@ -1405,7 +1372,10 @@
       .headline,
       .about-title,
       .section-title,
-      .for-you-title {
+      .for-you-title,
+      .why-title,
+      .warning-box h2,
+      .process-title {
         font-size: 45px;
       }
 
@@ -1415,26 +1385,6 @@
 
       .btn {
         font-size: 18px;
-      }
-
-      .service-card {
-        min-height: 250px;
-      }
-
-      .service-card h3 {
-        font-size: 23px;
-      }
-
-      .service-card p {
-        font-size: 14px;
-      }
-
-      .problem-item {
-        min-height: 88px;
-      }
-
-      .problem-text {
-        font-size: 17px;
       }
     }
   </style>
@@ -1459,7 +1409,9 @@
         <a href="#avaliacao">Avaliação</a>
       </nav>
 
-      <a class="header-cta" href="https://wa.me/5544998322107" target="_blank" rel="noopener">Contato</a>
+      <a class="header-cta" href="https://wa.me/5544998322107" target="_blank" rel="noopener">
+        Contato
+      </a>
 
       <button class="menu-button" type="button" aria-label="Abrir menu">
         <span></span>
