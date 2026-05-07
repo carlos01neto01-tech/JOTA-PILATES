@@ -1768,387 +1768,373 @@
 </body>
 </html>
 <!-- ========================= -->
-<!-- SESSÃO 08 — VÍDEOS -->
+<!-- SESSÃO 8 — VÍDEOS -->
 <!-- ========================= -->
 
-<section class="sessao-depoimentos-video">
-
-  <div class="container depoimentos-wrapper">
-
-    <div class="depoimentos-textos">
-      <h2>
-        Histórias de<br>
-        movimento,<br>
-        cuidado e evolução.
-      </h2>
-
+<section class="video-testimonials">
+  <div class="video-testimonials-inner">
+    <div class="video-copy">
+      <h2>Histórias de movimento, cuidado e evolução.</h2>
       <p>
-        Cada pessoa chega com uma necessidade diferente:
-        dor, insegurança, falta de mobilidade ou desejo
-        de envelhecer melhor. O objetivo é acompanhar
-        essa evolução de perto, respeitando cada fase
-        do processo. Aqui, cada conquista importa.
+        Cada pessoa chega com uma necessidade diferente: dor, insegurança,
+        falta de mobilidade ou desejo de envelhecer melhor. O objetivo é
+        acompanhar essa evolução de perto, respeitando cada fase do processo.
+        Aqui, cada conquista importa.
       </p>
     </div>
 
-    <div class="videos-scroll">
+    <div class="video-carousel" aria-label="Depoimentos em vídeo">
+      <article class="video-card">
+        <video src="assets/DEPOIMENTO-1.mov" preload="metadata"></video>
+        <button class="video-play" type="button" aria-label="Assistir depoimento">
+          <span></span>
+        </button>
+      </article>
 
-      <!-- VIDEO 1 -->
-      <div class="video-card">
-        <video controls preload="metadata" poster="thumb-video-1.webp">
-          <source src="assets/DEPOIMENTO-1.mov" type="video/mp4">
-        </video>
-      </div>
+      <article class="video-card">
+        <video src="assets/DEPOIMENTO-3.mov" preload="metadata"></video>
+        <button class="video-play" type="button" aria-label="Assistir depoimento">
+          <span></span>
+        </button>
+      </article>
 
-      <!-- VIDEO 2 -->
-      <div class="video-card">
-        <video controls preload="metadata" poster="thumb-video-2.webp">
-          <source src="assets/DEPOIMENTO-3.mov" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- VIDEO 3 -->
-      <div class="video-card">
-        <video controls preload="metadata" poster="thumb-video-3.webp">
-          <source src="assets/DEPOIMENTO-4.mov" type="video/mp4">
-        </video>
-      </div>
-
+      <article class="video-card">
+        <video src="assets/DEPOIMENTO-4.mov" preload="metadata"></video>
+        <button class="video-play" type="button" aria-label="Assistir depoimento">
+          <span></span>
+        </button>
+      </article>
     </div>
-
   </div>
-
 </section>
 
 <!-- ========================= -->
-<!-- SESSÃO 09 — CARROSSEL -->
+<!-- SESSÃO 9 — DEPOIMENTOS -->
 <!-- ========================= -->
 
-<section class="sessao-feedbacks">
+<section class="image-testimonials">
+  <h2 class="image-testimonials-title">Depoimentos</h2>
 
-  <div class="container">
+  <div class="image-carousel-wrap">
+    <div class="image-fade image-fade-left"></div>
+    <div class="image-fade image-fade-right"></div>
 
-    <h2 class="titulo-feedbacks">
-      Depoimentos
-    </h2>
+    <div class="image-carousel-track">
+      <img src="assets/DEPOIMENTO 1 IMAGEM .webp" alt="Depoimento de paciente">
+      <img src="assets/2DEPOIMENTO 2 IMAGEM.webp" alt="Depoimento de paciente">
+      <img src="assets/DEPOIMENTO 3 IMAGEM.webp" alt="Depoimento de paciente">
+      <img src="assets/DEPOIMENTO 4 IMAGEM.webp" alt="Depoimento de paciente">
+      <img src="assets/DEPOIMENTO 5 IMAGEM.webp" alt="Depoimento de paciente">
 
-  </div>
-
-  <div class="feedback-track-wrapper">
-
-    <div class="fade-left"></div>
-    <div class="fade-right"></div>
-
-    <div class="feedback-track">
-
-      <!-- BLOCO DUPLICADO -->
-      <!-- PARA LOOP INFINITO -->
-
-      <img src="assets/DEPOIMENTO 1 IMAGEM (3).webp" alt="">
-      <img src="assets/2DEPOIMENTO 2 IMAGEM(3).webp" alt="">
-      <img src="assets/DEPOIMENTO 3 IMAGEM(3).webp" alt="">
-      <img src="assets/DEPOIMENTO 4 IMAGEM(3).webp" alt="">
-      <img src="assets/DEPOIMENTO 5 IMAGEM(3).webp" alt="">
-
-      <!-- DUPLICA -->
-      <img src="assets/DEPOIMENTO 1 IMAGEM (3).webp" alt="">
-      <img src="assets/2DEPOIMENTO 2 IMAGEM(3).webp" alt="">
-      <img src="assets/DEPOIMENTO 3 IMAGEM(3).webp" alt="">
-      <img src="assets/DEPOIMENTO 4 IMAGEM(3).webp" alt="">
-      <img src="assets/DEPOIMENTO 5 IMAGEM(3).webp" alt="">
-
+      <img src="assets/DEPOIMENTO 1 IMAGEM .webp" alt="Depoimento de paciente">
+      <img src="assets/2DEPOIMENTO 2 IMAGEM.webp" alt="Depoimento de paciente">
+      <img src="assets/DEPOIMENTO 3 IMAGEM.webp" alt="Depoimento de paciente">
+      <img src="assets/DEPOIMENTO 4 IMAGEM.webp" alt="Depoimento de paciente">
+      <img src="assets/DEPOIMENTO 5 IMAGEM.webp" alt="Depoimento de paciente">
     </div>
-
   </div>
 
-  <div class="container depoimento-btn-wrapper">
-
-    <a href="#" class="btn-agendar">
-      Agendar avaliação pelo WhatsApp
-    </a>
-
-  </div>
-
+  <a class="testimonial-cta" href="https://wa.me/5544998322107" target="_blank" rel="noopener">
+    Agendar avaliação pelo WhatsApp
+  </a>
 </section>
 
 <style>
+  .video-testimonials,
+  .image-testimonials {
+    background: #fff;
+    overflow: hidden;
+  }
 
-/* ========================= */
-/* BASE */
-/* ========================= */
+  .video-testimonials {
+    padding: 110px 0 72px;
+  }
 
-.sessao-depoimentos-video,
-.sessao-feedbacks{
-    width:100%;
-    background:#f3f3f3;
-    overflow:hidden;
-}
+  .video-testimonials-inner {
+    width: min(1160px, calc(100% - 90px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .92fr 1.08fr;
+    gap: 70px;
+    align-items: center;
+  }
 
-.container{
-    width:100%;
-    max-width:1280px;
-    margin:0 auto;
-    padding:0 32px;
-    box-sizing:border-box;
-}
+  .video-copy h2,
+  .image-testimonials-title {
+    font-size: 50px;
+    line-height: .96;
+    letter-spacing: -0.075em;
+    font-weight: 700;
+    color: #176f31;
+  }
 
-/* ========================= */
-/* SESSAO VIDEO */
-/* ========================= */
+  .video-copy p {
+    margin-top: 28px;
+    font-size: 29px;
+    line-height: 1.12;
+    letter-spacing: -0.075em;
+    font-weight: 300;
+    color: #111;
+  }
 
-.sessao-depoimentos-video{
-    padding:120px 0 90px;
-}
+  .video-carousel {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 8px 0 28px;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+  }
 
-.depoimentos-wrapper{
-    display:flex;
-    align-items:flex-start;
-    justify-content:space-between;
-    gap:70px;
-}
+  .video-carousel:active {
+    cursor: grabbing;
+  }
 
-.depoimentos-textos{
-    width:40%;
-}
+  .video-carousel::-webkit-scrollbar {
+    display: none;
+  }
 
-.depoimentos-textos h2{
-    font-size:72px;
-    line-height:0.95;
-    font-weight:700;
-    color:#14732E;
-    margin-bottom:32px;
-    letter-spacing:-3px;
-}
+  .video-card {
+    position: relative;
+    flex: 0 0 300px;
+    height: 470px;
+    border-radius: 28px;
+    overflow: hidden;
+    scroll-snap-align: center;
+    background: #ddd;
+  }
 
-.depoimentos-textos p{
-    font-size:28px;
-    line-height:1.12;
-    font-weight:400;
-    color:#111;
-    max-width:620px;
-}
+  .video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-.videos-scroll{
-    width:60%;
-    display:flex;
-    gap:24px;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    padding-bottom:10px;
-}
+  .video-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 104px;
+    height: 104px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 999px;
+    background: radial-gradient(circle, #f5f815 0%, #dbe500 58%, #babc27 100%);
+    box-shadow: 0 0 34px rgba(219, 229, 0, .65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 
-.videos-scroll::-webkit-scrollbar{
-    display:none;
-}
+  .video-play span {
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-left: 34px solid #176f31;
+  }
 
-.video-card{
-    flex:none;
-    width:320px;
-    scroll-snap-align:center;
-}
+  .video-card.playing .video-play {
+    opacity: 0;
+    pointer-events: none;
+  }
 
-.video-card video{
-    width:100%;
-    height:620px;
-    object-fit:cover;
-    border-radius:34px;
-    background:#000;
-}
+  .image-testimonials {
+    padding: 34px 0 110px;
+  }
 
-/* ========================= */
-/* SESSAO FEEDBACKS */
-/* ========================= */
+  .image-testimonials-title {
+    width: min(1160px, calc(100% - 90px));
+    margin: 0 auto 52px;
+    text-align: center;
+  }
 
-.sessao-feedbacks{
-    padding:40px 0 120px;
-}
+  .image-carousel-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
 
-.titulo-feedbacks{
-    font-size:72px;
-    line-height:1;
-    font-weight:700;
-    color:#14732E;
-    letter-spacing:-3px;
-    margin-bottom:60px;
-}
+  .image-carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    width: max-content;
+    animation: imageTestimonialsLoop 32s linear infinite;
+  }
 
-.feedback-track-wrapper{
-    width:100%;
-    position:relative;
-    overflow:hidden;
-}
+  .image-carousel-wrap:hover .image-carousel-track {
+    animation-play-state: paused;
+  }
 
-.feedback-track{
-    display:flex;
-    align-items:center;
-    gap:28px;
-    width:max-content;
-    animation:feedbackLoop 30s linear infinite;
-}
+  .image-carousel-track img {
+    flex: 0 0 auto;
+    width: 245px;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+  }
 
-.feedback-track img{
-    width:290px;
-    border-radius:8px;
-    flex:none;
-}
+  .image-fade {
+    position: absolute;
+    top: 0;
+    width: 170px;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+  }
 
-.feedback-track-wrapper:hover .feedback-track{
-    animation-play-state:paused;
-}
+  .image-fade-left {
+    left: 0;
+    background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0) 100%);
+  }
 
-.fade-left,
-.fade-right{
-    position:absolute;
-    top:0;
-    width:220px;
-    height:100%;
-    z-index:3;
-    pointer-events:none;
-}
+  .image-fade-right {
+    right: 0;
+    background: linear-gradient(270deg, #fff 0%, rgba(255,255,255,0) 100%);
+  }
 
-.fade-left{
-    left:0;
-    background:linear-gradient(
-        90deg,
-        #f3f3f3 0%,
-        rgba(243,243,243,0) 100%
-    );
-}
-
-.fade-right{
-    right:0;
-    background:linear-gradient(
-        270deg,
-        #f3f3f3 0%,
-        rgba(243,243,243,0) 100%
-    );
-}
-
-@keyframes feedbackLoop{
-    from{
-        transform:translateX(0);
+  @keyframes imageTestimonialsLoop {
+    from {
+      transform: translateX(0);
     }
-    to{
-        transform:translateX(-50%);
+
+    to {
+      transform: translateX(-50%);
     }
-}
+  }
 
-/* ========================= */
-/* BOTAO */
-/* ========================= */
+  .testimonial-cta {
+    width: min(760px, calc(100% - 56px));
+    min-height: 92px;
+    margin: 76px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(110deg, #dbe500, #cbd200, #a0a500);
+    color: #176f31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.05;
+    letter-spacing: -0.065em;
+    font-weight: 700;
+  }
 
-.depoimento-btn-wrapper{
-    display:flex;
-    justify-content:center;
-    margin-top:80px;
-}
+  @media (max-width: 768px) {
+    .video-testimonials {
+      padding: 78px 0 54px;
+    }
 
-.btn-agendar{
-    width:100%;
-    max-width:760px;
-    height:92px;
-    background:#D9E000;
-    border-radius:999px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    color:#14732E;
-    font-size:34px;
-    font-weight:700;
-    transition:0.3s;
-}
+    .video-testimonials-inner {
+      width: calc(100% - 52px);
+      display: flex;
+      flex-direction: column;
+      gap: 38px;
+      align-items: flex-start;
+    }
 
-.btn-agendar:hover{
-    transform:scale(1.02);
-}
+    .video-copy h2,
+    .image-testimonials-title {
+      font-size: 34px;
+      line-height: .98;
+      letter-spacing: -0.075em;
+    }
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
+    .video-copy p {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.08;
+      letter-spacing: -0.065em;
+    }
 
-@media(max-width:768px){
+    .video-carousel {
+      width: 100vw;
+      margin-left: calc((100vw - 100%) / -2);
+      padding-left: 40px;
+      padding-right: 40px;
+      gap: 20px;
+    }
 
-.container{
-    padding:0 24px;
-}
+    .video-card {
+      flex-basis: 300px;
+      height: 520px;
+      border-radius: 26px;
+    }
 
-.sessao-depoimentos-video{
-    padding:90px 0 70px;
-}
+    .video-play {
+      width: 96px;
+      height: 96px;
+    }
 
-.depoimentos-wrapper{
-    flex-direction:column;
-    gap:40px;
-}
+    .video-play span {
+      border-top-width: 20px;
+      border-bottom-width: 20px;
+      border-left-width: 31px;
+    }
 
-.depoimentos-textos{
-    width:100%;
-}
+    .image-testimonials {
+      padding: 22px 0 86px;
+    }
 
-.depoimentos-textos h2{
-    font-size:34px;
-    line-height:0.95;
-    letter-spacing:-1.5px;
-    margin-bottom:22px;
-}
+    .image-testimonials-title {
+      width: calc(100% - 52px);
+      text-align: left;
+      margin-bottom: 34px;
+    }
 
-.depoimentos-textos p{
-    font-size:16px;
-    line-height:1.08;
-    max-width:100%;
-}
+    .image-carousel-track {
+      gap: 16px;
+      animation-duration: 26s;
+    }
 
-.videos-scroll{
-    width:100%;
-    gap:18px;
-    padding-left:14px;
-}
+    .image-carousel-track img {
+      width: 210px;
+      height: 450px;
+    }
 
-.video-card{
-    width:300px;
-}
+    .image-fade {
+      width: 72px;
+    }
 
-.video-card video{
-    height:540px;
-    border-radius:26px;
-}
-
-.sessao-feedbacks{
-    padding:10px 0 90px;
-}
-
-.titulo-feedbacks{
-    font-size:34px;
-    letter-spacing:-1.5px;
-    margin-bottom:36px;
-}
-
-.feedback-track{
-    gap:16px;
-}
-
-.feedback-track img{
-    width:190px;
-}
-
-.fade-left,
-.fade-right{
-    width:80px;
-}
-
-.depoimento-btn-wrapper{
-    margin-top:50px;
-}
-
-.btn-agendar{
-    max-width:100%;
-    height:74px;
-    font-size:18px;
-    padding:0 24px;
-    text-align:center;
-}
-
-}
-
+    .testimonial-cta {
+      min-height: 74px;
+      margin-top: 52px;
+      font-size: 18px;
+      padding: 0 20px;
+    }
+  }
 </style>
+
+<script>
+  document.querySelectorAll(".video-card").forEach((card) => {
+    const video = card.querySelector("video");
+    const button = card.querySelector(".video-play");
+
+    button.addEventListener("click", () => {
+      document.querySelectorAll(".video-card video").forEach((item) => {
+        if (item !== video) {
+          item.pause();
+          item.closest(".video-card").classList.remove("playing");
+        }
+      });
+
+      video.setAttribute("controls", "controls");
+      video.play();
+      card.classList.add("playing");
+    });
+
+    video.addEventListener("pause", () => {
+      card.classList.remove("playing");
+    });
+
+    video.addEventListener("ended", () => {
+      card.classList.remove("playing");
+      video.removeAttribute("controls");
+    });
+  });
+</script>
