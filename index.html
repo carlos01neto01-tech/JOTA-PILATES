@@ -1312,8 +1312,6 @@
   </div>
 </section>
 
-<style>
-
 <!-- ===================================================== -->
 <!-- SESSÃO 5 - POR QUE ESCOLHER -->
 <!-- ===================================================== -->
@@ -1334,14 +1332,31 @@
     </h2>
 
     <div class="why-carousel-wrapper">
+
       <div class="why-indicator"></div>
 
       <div class="why-carousel-track">
-        <div class="why-item">Atendimento próximo e individualizado.</div>
-        <div class="why-item">Exercícios adaptados para cada necessidade.</div>
-        <div class="why-item">Ambiente acolhedor e seguro.</div>
-        <div class="why-item">Acompanhamento durante a prática.</div>
-        <div class="why-item">Cuidado para jovens, adultos e idosos.</div>
+
+        <div class="why-item">
+          Atendimento próximo e individualizado.
+        </div>
+
+        <div class="why-item">
+          Exercícios adaptados para cada necessidade.
+        </div>
+
+        <div class="why-item">
+          Ambiente acolhedor e seguro.
+        </div>
+
+        <div class="why-item">
+          Acompanhamento durante a prática.
+        </div>
+
+        <div class="why-item">
+          Cuidado para jovens, adultos e idosos.
+        </div>
+
       </div>
     </div>
 
@@ -1349,42 +1364,60 @@
 </section>
 
 <!-- ===================================================== -->
-<!-- SESSÃO 6 - ALERTA -->
+<!-- SESSÃO 6 -->
 <!-- ===================================================== -->
 
 <section class="warning-section">
+
   <div class="warning-box">
 
-    <h2>Seu corpo dá sinais antes de parar.</h2>
+    <h2>
+      Seu corpo dá sinais antes de parar.
+    </h2>
 
     <p>
-      <strong>A dor no joelho, a lombar travada, a postura cansada e a falta de disposição</strong>
+      <strong>
+        A dor no joelho, a lombar travada, a postura cansada e a falta de disposição
+      </strong>
+
       não aparecem do nada. Muitas vezes, são sinais de que o corpo precisa de atenção,
       fortalecimento e movimento correto. Cuidar agora é evitar que pequenos incômodos
       virem grandes limitações.
     </p>
 
-    <a href="https://wa.me/5544998322107" target="_blank" rel="noopener" class="warning-btn">
+    <a href="https://wa.me/5544998322107"
+       target="_blank"
+       rel="noopener"
+       class="warning-btn">
+
       Agendar avaliação pelo WhatsApp
+
     </a>
 
   </div>
 </section>
 
 <!-- ===================================================== -->
-<!-- SESSÃO 7 - PROCESSO -->
+<!-- SESSÃO 7 -->
 <!-- ===================================================== -->
 
 <section class="process-section">
 
-  <h2 class="process-title">Nosso processo de atendimento</h2>
+  <h2 class="process-title">
+    Nosso processo de atendimento
+  </h2>
 
   <div class="process-wrapper">
+
+    <!-- OVAIS -->
 
     <div class="process-ring"></div>
     <div class="process-ring process-ring-2"></div>
 
+    <!-- 01 -->
+
     <div class="process-circle process-1">
+
       <div class="process-front">
         <span>01</span>
         <h3>Avaliação inicial</h3>
@@ -1393,9 +1426,13 @@
       <div class="process-back">
         Entendemos suas dores, rotina e limitações para iniciar o tratamento correto.
       </div>
+
     </div>
 
+    <!-- 02 -->
+
     <div class="process-circle process-2">
+
       <div class="process-front">
         <span>02</span>
         <h3>Plano de cuidado</h3>
@@ -1404,9 +1441,13 @@
       <div class="process-back">
         Criamos exercícios personalizados conforme sua necessidade e evolução.
       </div>
+
     </div>
 
+    <!-- 03 -->
+
     <div class="process-circle process-3">
+
       <div class="process-front">
         <span>03</span>
         <h3>Acompanhamento</h3>
@@ -1415,9 +1456,13 @@
       <div class="process-back">
         Ajustamos os movimentos e acompanhamos cada etapa do processo.
       </div>
+
     </div>
 
+    <!-- 04 -->
+
     <div class="process-circle process-4">
+
       <div class="process-front">
         <span>04</span>
         <h3>Evolução contínua</h3>
@@ -1426,379 +1471,537 @@
       <div class="process-back">
         Mantemos constância, mobilidade e qualidade de vida no longo prazo.
       </div>
+
     </div>
 
   </div>
 </section>
 
 <style>
+
+/* ===================================================== */
+/* REMOVE BRILHO EXAGERADO */
+/* ===================================================== */
+
+.hero{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.82) 0%,
+      rgba(255,255,255,.78) 45%,
+      rgba(255,255,255,.62) 100%
+    ),
+    url("assets/hero-bg.webp")
+    center center / cover no-repeat !important;
+}
+
 /* ===================================================== */
 /* SESSÃO 5 */
 /* ===================================================== */
 
-.why-jmota {
-  position: relative;
-  overflow: hidden;
-  min-height: 860px;
-  background: #f4f4f4;
+.why-jmota{
+  position:relative;
+  overflow:hidden;
+  min-height:860px;
+  background:#f4f4f4;
 }
 
-.why-image {
-  position: absolute;
-  inset: 0;
+.why-image{
+  position:absolute;
+  inset:0;
 }
 
-.why-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.why-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.why-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
+.why-overlay{
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
     90deg,
     rgba(244,244,244,.98) 0%,
     rgba(244,244,244,.92) 28%,
-    rgba(244,244,244,.65) 48%,
+    rgba(244,244,244,.55) 48%,
     rgba(244,244,244,0) 72%
   );
 }
 
-.why-content {
-  position: relative;
-  z-index: 3;
-  width: min(1200px, calc(100% - 100px));
-  margin: 0 auto;
-  padding: 120px 0;
+.why-content{
+  position:relative;
+  z-index:5;
+
+  width:min(1200px, calc(100% - 100px));
+  margin:0 auto;
+
+  padding:120px 0;
 }
 
-.why-title {
-  font-size: 78px;
-  line-height: .92;
-  letter-spacing: -0.08em;
-  color: #176f31;
-  margin-bottom: 80px;
-  font-weight: 700;
+.why-title{
+  font-size:78px;
+  line-height:.92;
+  letter-spacing:-0.08em;
+
+  color:#176f31;
+
+  margin-bottom:80px;
+
+  font-weight:700;
 }
 
-.why-title span {
-  color: #dbe500;
+.why-title span{
+  color:#dbe500;
 }
 
-.why-carousel-wrapper {
-  position: relative;
-  width: 760px;
-  height: 300px;
-  overflow: hidden;
+/* ===================================================== */
+/* CARROSSEL */
+/* ===================================================== */
+
+.why-carousel-wrapper{
+  position:relative;
+
+  width:760px;
+  height:300px;
+
+  overflow:hidden;
 }
 
-.why-indicator {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  border-left: 28px solid #176f31;
-  z-index: 10;
+.why-indicator{
+  position:absolute;
+
+  left:0;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:0;
+  height:0;
+
+  border-top:18px solid transparent;
+  border-bottom:18px solid transparent;
+  border-left:28px solid #176f31;
+
+  z-index:20;
 }
 
-.why-carousel-track {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.why-carousel-track{
+  position:relative;
+  width:100%;
+  height:100%;
 }
 
-.why-item {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding-left: 64px;
-  font-size: 42px;
-  line-height: 1;
-  letter-spacing: -0.065em;
-  font-weight: 300;
-  opacity: .18;
-  transform: translateY(120px) scale(.92);
-  transition: transform .75s cubic-bezier(.22,1,.36,1), opacity .75s cubic-bezier(.22,1,.36,1);
+.why-item{
+  position:absolute;
+
+  left:0;
+  width:100%;
+
+  padding-left:64px;
+
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-0.065em;
+
+  font-weight:300;
+
+  opacity:.18;
+
+  transform:translateY(120px) scale(.92);
+
+  transition:
+    transform .75s cubic-bezier(.22,1,.36,1),
+    opacity .75s cubic-bezier(.22,1,.36,1);
 }
 
-.why-item.active {
-  opacity: 1;
-  font-weight: 700;
-  transform: translateY(120px) scale(1);
-  color: #000;
+.why-item.active{
+  opacity:1;
+  font-weight:700;
+
+  transform:translateY(120px) scale(1);
+
+  color:#000;
 }
 
-.why-item.prev {
-  opacity: .42;
-  font-weight: 300;
-  transform: translateY(40px) scale(.95);
+.why-item.prev{
+  opacity:.42;
+  transform:translateY(40px) scale(.95);
 }
 
-.why-item.next {
-  opacity: .42;
-  font-weight: 300;
-  transform: translateY(200px) scale(.95);
+.why-item.next{
+  opacity:.42;
+  transform:translateY(200px) scale(.95);
 }
 
-.why-item.hidden {
-  opacity: 0;
-  transform: translateY(280px) scale(.88);
+.why-item.hidden{
+  opacity:0;
+  transform:translateY(280px) scale(.88);
 }
 
 /* ===================================================== */
 /* SESSÃO 6 */
 /* ===================================================== */
 
-.warning-section {
-  padding: 120px 0;
-  background: #f4f4f4;
+.warning-section{
+  padding:120px 0;
+  background:#f4f4f4;
 }
 
-.warning-box {
-  width: min(1200px, calc(100% - 100px));
-  margin: 0 auto;
-  border: 2px solid #176f31;
-  border-radius: 42px;
-  padding: 90px 80px;
-  text-align: center;
+.warning-box{
+  width:min(1200px, calc(100% - 100px));
+
+  margin:0 auto;
+
+  border:2px solid #176f31;
+  border-radius:42px;
+
+  padding:90px 80px;
+
+  text-align:center;
 }
 
-.warning-box h2 {
-  font-size: 72px;
-  line-height: .94;
-  letter-spacing: -0.08em;
-  color: #176f31;
-  margin-bottom: 34px;
-  font-weight: 700;
+.warning-box h2{
+  font-size:72px;
+  line-height:.94;
+  letter-spacing:-0.08em;
+
+  color:#176f31;
+
+  margin-bottom:34px;
+
+  font-weight:700;
 }
 
-.warning-box p {
-  font-size: 36px;
-  line-height: 1.06;
-  letter-spacing: -0.06em;
-  max-width: 1080px;
-  margin: 0 auto 54px;
-  font-weight: 300;
+.warning-box p{
+  font-size:36px;
+  line-height:1.06;
+  letter-spacing:-0.06em;
+
+  max-width:1080px;
+
+  margin:0 auto 54px;
+
+  font-weight:300;
 }
 
-.warning-box p strong {
-  font-weight: 700;
+.warning-box p strong{
+  font-weight:700;
 }
 
-.warning-btn {
-  width: 620px;
-  max-width: 100%;
-  min-height: 110px;
-  border-radius: 999px;
-  margin: 0 auto;
-  background: #dbe500;
-  color: #176f31;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: -0.06em;
+.warning-btn{
+  width:620px;
+  max-width:100%;
+
+  min-height:110px;
+
+  border-radius:999px;
+
+  margin:0 auto;
+
+  background:#dbe500;
+  color:#176f31;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:34px;
+  font-weight:700;
+  letter-spacing:-0.06em;
 }
 
 /* ===================================================== */
 /* SESSÃO 7 */
 /* ===================================================== */
 
-.process-section {
-  background: #f4f4f4;
-  padding: 60px 0 140px;
-  overflow: hidden;
+.process-section{
+  background:#f4f4f4;
+
+  padding:60px 0 140px;
+
+  overflow:hidden;
 }
 
-.process-title {
-  text-align: center;
-  color: #176f31;
-  font-size: 74px;
-  line-height: .94;
-  letter-spacing: -0.08em;
-  margin-bottom: 80px;
-  font-weight: 700;
+.process-title{
+  text-align:center;
+
+  color:#176f31;
+
+  font-size:74px;
+  line-height:.94;
+  letter-spacing:-0.08em;
+
+  margin-bottom:80px;
+
+  font-weight:700;
 }
 
-.process-wrapper {
-  width: 1100px;
-  height: 760px;
-  margin: 0 auto;
-  position: relative;
+.process-wrapper{
+  width:1100px;
+  height:760px;
+
+  margin:0 auto;
+
+  position:relative;
+
+  isolation:isolate;
 }
+
+/* ===================================================== */
+/* OVAIS */
+/* ===================================================== */
 
 .process-ring,
-.process-ring-2 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 50%;
-  pointer-events: none;
+.process-ring-2{
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  border-radius:50%;
+
+  pointer-events:none;
+
+  z-index:1;
 }
 
-.process-ring {
-  width: 760px;
-  height: 420px;
-  border: 5px solid #176f31;
+.process-ring{
+  width:760px;
+  height:420px;
+
+  border:5px solid #176f31;
 }
 
-.process-ring-2 {
-  width: 620px;
-  height: 300px;
-  border: 4px solid rgba(23,111,49,.65);
+.process-ring-2{
+  width:620px;
+  height:300px;
+
+  border:4px solid rgba(23,111,49,.55);
 }
 
-.process-circle {
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: #176f31;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform .45s ease, box-shadow .45s ease;
-  z-index: 4;
+/* ===================================================== */
+/* CÍRCULOS */
+/* ===================================================== */
+
+.process-circle{
+  position:absolute;
+
+  width:250px;
+  height:250px;
+
+  border-radius:50%;
+
+  background:#176f31;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  z-index:5;
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
 }
 
-.process-circle::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(145deg, #F5F815 0%, #BABC27 100%);
-  opacity: 0;
-  transition: opacity .45s ease;
-  z-index: 1;
+/* GRADIENTE */
+
+.process-circle::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    145deg,
+    #F5F815 0%,
+    #BABC27 100%
+  );
+
+  opacity:0;
+
+  transition:opacity .45s ease;
+
+  z-index:1;
 }
 
 .process-circle:hover::before,
-.process-circle:focus-within::before,
-.process-circle.active::before {
-  opacity: 1;
+.process-circle.active::before{
+  opacity:1;
 }
 
 .process-circle:hover,
-.process-circle:focus-within,
-.process-circle.active {
-  transform: scale(1.04);
-  box-shadow: 0 20px 50px rgba(0,0,0,.14);
+.process-circle.active{
+  transform:scale(1.04);
+  box-shadow:0 20px 50px rgba(0,0,0,.14);
+
+  z-index:20;
 }
+
+/* ===================================================== */
+/* CONTEÚDO */
+/* ===================================================== */
 
 .process-front,
-.process-back {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: opacity .4s ease, transform .4s ease;
-  text-align: center;
-  z-index: 2;
+.process-back{
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding:34px;
+
+  z-index:3;
+
+  transition:
+    opacity .4s ease,
+    transform .4s ease;
 }
 
-.process-front {
-  padding: 34px;
-  opacity: 1;
-}
+/* FRENTE */
 
-.process-back {
-  padding: 34px;
-  opacity: 0;
-  transform: scale(.9);
-  color: #176f31;
-  font-size: 22px;
-  line-height: 1.08;
-  letter-spacing: -0.05em;
-  font-weight: 300;
+.process-front{
+  opacity:1;
 }
 
 .process-circle:hover .process-front,
-.process-circle:focus-within .process-front,
-.process-circle.active .process-front {
-  opacity: 0;
-  transform: scale(.86);
+.process-circle.active .process-front{
+  opacity:0;
+  transform:scale(.86);
+}
+
+/* DESCRIÇÃO */
+
+.process-back{
+  opacity:0;
+  transform:scale(.9);
+
+  color:#176f31;
+
+  font-size:20px;
+  line-height:1.08;
+  letter-spacing:-0.05em;
+
+  font-weight:300;
+
+  max-width:74%;
 }
 
 .process-circle:hover .process-back,
-.process-circle:focus-within .process-back,
-.process-circle.active .process-back {
-  opacity: 1;
-  transform: scale(1);
+.process-circle.active .process-back{
+  opacity:1;
+  transform:scale(1);
 }
 
-.process-front span {
-  font-size: 68px;
-  line-height: 1;
-  font-weight: 700;
-  color: #dbe500;
-  margin-bottom: 10px;
+/* NÚMERO */
+
+.process-front span{
+  font-size:62px;
+  line-height:1;
+
+  font-weight:700;
+
+  color:#dbe500;
+
+  margin-bottom:10px;
 }
 
-.process-front h3 {
-  font-size: 36px;
-  line-height: .92;
-  letter-spacing: -0.065em;
-  color: #fff;
-  font-weight: 700;
-  max-width: 90%;
+/* TÍTULO */
+
+.process-front h3{
+  font-size:31px;
+  line-height:.95;
+  letter-spacing:-0.065em;
+
+  color:#fff;
+
+  font-weight:700;
+
+  max-width:82%;
 }
 
-.process-1 {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+/* ===================================================== */
+/* POSIÇÕES */
+/* ===================================================== */
+
+.process-1{
+  top:0;
+  left:50%;
+
+  transform:translateX(-50%);
 }
 
-.process-2 {
-  right: 70px;
-  top: 210px;
+.process-2{
+  right:70px;
+  top:210px;
 }
 
-.process-3 {
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
+.process-3{
+  left:50%;
+  bottom:0;
+
+  transform:translateX(-50%);
 }
 
-.process-4 {
-  left: 70px;
-  top: 210px;
+.process-4{
+  left:70px;
+  top:210px;
 }
+
+/* HOVER CÍRCULOS CENTRAIS */
 
 .process-1:hover,
-.process-1.active {
-  transform: translateX(-50%) scale(1.04);
+.process-1.active{
+  transform:translateX(-50%) scale(1.04);
 }
 
 .process-3:hover,
-.process-3.active {
-  transform: translateX(-50%) scale(1.04);
+.process-3.active{
+  transform:translateX(-50%) scale(1.04);
 }
 
 /* ===================================================== */
 /* MOBILE */
 /* ===================================================== */
 
-@media(max-width: 768px) {
+@media(max-width:768px){
 
-  .why-jmota {
-    min-height: auto;
-    padding-bottom: 80px;
+  /* HERO */
+
+  .hero{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.78) 0%,
+        rgba(255,255,255,.74) 48%,
+        rgba(255,255,255,.68) 100%
+      ),
+      url("assets/hero-bg.webp")
+      center center / cover no-repeat !important;
   }
 
-  .why-overlay {
-    background: linear-gradient(
+  /* WHY */
+
+  .why-jmota{
+    min-height:auto;
+    padding-bottom:80px;
+  }
+
+  .why-overlay{
+    background:linear-gradient(
       180deg,
       rgba(244,244,244,0) 0%,
       rgba(244,244,244,.95) 60%,
@@ -1806,170 +2009,237 @@
     );
   }
 
-  .why-content {
-    width: calc(100% - 56px);
-    padding: 540px 0 0;
+  .why-content{
+    width:calc(100% - 56px);
+
+    padding:540px 0 0;
   }
 
-  .why-title {
-    font-size: 54px;
-    text-align: center;
-    margin-bottom: 46px;
+  .why-title{
+    font-size:54px;
+
+    text-align:center;
+
+    margin-bottom:46px;
   }
 
-  .why-carousel-wrapper {
-    width: 100%;
-    height: 220px;
+  /* CARROSSEL */
+
+  .why-carousel-wrapper{
+    width:100%;
+    height:220px;
   }
 
-  .why-item {
-    font-size: 22px;
-    padding-left: 44px;
+  .why-item{
+    font-size:22px;
+
+    padding-left:44px;
   }
 
-  .why-item.active {
-    transform: translateY(92px) scale(1);
+  .why-item.active{
+    transform:translateY(92px) scale(1);
   }
 
-  .why-item.prev {
-    transform: translateY(22px) scale(.95);
+  .why-item.prev{
+    transform:translateY(22px) scale(.95);
   }
 
-  .why-item.next {
-    transform: translateY(160px) scale(.95);
+  .why-item.next{
+    transform:translateY(160px) scale(.95);
   }
 
-  .warning-section {
-    padding: 80px 0;
+  /* WARNING */
+
+  .warning-section{
+    padding:80px 0;
   }
 
-  .warning-box {
-    width: calc(100% - 56px);
-    padding: 60px 26px;
-    border-radius: 34px;
+  .warning-box{
+    width:calc(100% - 56px);
+
+    padding:60px 26px;
+
+    border-radius:34px;
   }
 
-  .warning-box h2 {
-    font-size: 56px;
-    margin-bottom: 26px;
+  .warning-box h2{
+    font-size:56px;
+
+    margin-bottom:26px;
   }
 
-  .warning-box p {
-    font-size: 22px;
-    line-height: 1.02;
-    margin-bottom: 36px;
+  .warning-box p{
+    font-size:22px;
+    line-height:1.02;
+
+    margin-bottom:36px;
   }
 
-  .warning-btn {
-    min-height: 82px;
-    font-size: 22px;
+  .warning-btn{
+    min-height:82px;
+
+    font-size:22px;
   }
 
-  .process-section {
-    padding: 40px 0 90px;
+  /* PROCESS */
+
+  .process-section{
+    padding:40px 0 90px;
   }
 
-  .process-title {
-    font-size: 52px;
-    width: calc(100% - 56px);
-    margin: 0 auto 44px;
+  .process-title{
+    font-size:52px;
+
+    width:calc(100% - 56px);
+
+    margin:0 auto 44px;
   }
 
-  .process-wrapper {
-    width: 100%;
-    height: 520px;
+  .process-wrapper{
+    width:100%;
+    max-width:430px;
+
+    height:500px;
+
+    margin:0 auto;
   }
 
-  .process-ring {
-    width: 320px;
-    height: 210px;
-    border-width: 4px;
+  /* OVAIS */
+
+  .process-ring{
+    width:310px;
+    height:205px;
+
+    border-width:4px;
   }
 
-  .process-ring-2 {
-    width: 260px;
-    height: 150px;
-    border-width: 3px;
+  .process-ring-2{
+    width:250px;
+    height:150px;
+
+    border-width:3px;
   }
 
-  .process-circle {
-    width: 132px;
-    height: 132px;
+  /* CÍRCULOS */
+
+  .process-circle{
+    width:118px;
+    height:118px;
   }
 
-  .process-front {
-    padding: 18px;
+  /* CONTEÚDO */
+
+  .process-front{
+    padding:18px;
   }
 
-  .process-back {
-    font-size: 11px;
-    line-height: 1.04;
-    padding: 15px;
+  .process-back{
+    font-size:10px;
+    line-height:1.05;
+
+    max-width:78%;
+
+    padding:12px;
   }
 
-  .process-front span {
-    font-size: 38px;
-    margin-bottom: 4px;
+  /* NÚMERO */
+
+  .process-front span{
+    font-size:34px;
+
+    margin-bottom:3px;
   }
 
-  .process-front h3 {
-    font-size: 17px;
-    line-height: .92;
-    max-width: 92%;
+  /* TÍTULO */
+
+  .process-front h3{
+    font-size:15px;
+    line-height:.92;
+
+    max-width:86%;
   }
 
-  .process-1 {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  /* POSIÇÕES */
+
+  .process-1{
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
   }
 
-  .process-2 {
-    right: 22px;
-    top: 140px;
+  .process-2{
+    top:150px;
+    right:18px;
   }
 
-  .process-3 {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  .process-3{
+    bottom:0;
+    left:50%;
+
+    transform:translateX(-50%);
   }
 
-  .process-4 {
-    left: 22px;
-    top: 140px;
+  .process-4{
+    top:150px;
+    left:18px;
   }
 
   .process-1:hover,
-  .process-1.active {
-    transform: translateX(-50%) scale(1.04);
+  .process-1.active{
+    transform:translateX(-50%) scale(1.04);
   }
 
   .process-3:hover,
-  .process-3.active {
-    transform: translateX(-50%) scale(1.04);
+  .process-3.active{
+    transform:translateX(-50%) scale(1.04);
   }
 }
+
 </style>
 
 <script>
+
+/* ===================================================== */
+/* CARROSSEL */
+/* ===================================================== */
+
 const whyItems = document.querySelectorAll(".why-item");
+
 let current = 0;
 
-function updateWhyCarousel() {
-  whyItems.forEach(item => {
-    item.classList.remove("active", "prev", "next", "hidden");
+function updateWhyCarousel(){
+
+  whyItems.forEach(item=>{
+    item.classList.remove(
+      "active",
+      "prev",
+      "next",
+      "hidden"
+    );
   });
 
-  const prev = (current - 1 + whyItems.length) % whyItems.length;
-  const next = (current + 1) % whyItems.length;
+  const prev =
+    (current - 1 + whyItems.length) %
+    whyItems.length;
+
+  const next =
+    (current + 1) %
+    whyItems.length;
 
   whyItems[current].classList.add("active");
+
   whyItems[prev].classList.add("prev");
+
   whyItems[next].classList.add("next");
 
-  whyItems.forEach((item, index) => {
-    if (index !== current && index !== prev && index !== next) {
+  whyItems.forEach((item,index)=>{
+
+    if(
+      index !== current &&
+      index !== prev &&
+      index !== next
+    ){
       item.classList.add("hidden");
     }
   });
@@ -1977,21 +2247,39 @@ function updateWhyCarousel() {
 
 updateWhyCarousel();
 
-setInterval(() => {
-  current = (current + 1) % whyItems.length;
+setInterval(()=>{
+
+  current =
+    (current + 1) %
+    whyItems.length;
+
   updateWhyCarousel();
-}, 2600);
 
-/* MOBILE: toque no círculo alterna descrição */
-const processCircles = document.querySelectorAll(".process-circle");
+},2600);
 
-processCircles.forEach(circle => {
-  circle.addEventListener("click", () => {
-    processCircles.forEach(item => {
-      if (item !== circle) item.classList.remove("active");
+/* ===================================================== */
+/* PROCESSO MOBILE */
+/* ===================================================== */
+
+const processCircles =
+  document.querySelectorAll(".process-circle");
+
+processCircles.forEach(circle=>{
+
+  circle.addEventListener("click",()=>{
+
+    processCircles.forEach(item=>{
+
+      if(item !== circle){
+        item.classList.remove("active");
+      }
+
     });
 
     circle.classList.toggle("active");
+
   });
+
 });
+
 </script>
