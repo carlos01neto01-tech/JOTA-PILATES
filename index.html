@@ -1775,6 +1775,7 @@
   <div class="video-testimonials-inner">
     <div class="video-copy">
       <h2>Histórias de movimento, cuidado e evolução.</h2>
+
       <p>
         Cada pessoa chega com uma necessidade diferente: dor, insegurança,
         falta de mobilidade ou desejo de envelhecer melhor. O objetivo é
@@ -1783,33 +1784,35 @@
       </p>
     </div>
 
-    <div class="video-carousel" aria-label="Depoimentos em vídeo">
-      <article class="video-card">
-        <video src="assets/DEPOIMENTO-1.mov" preload="metadata"></video>
-        <button class="video-play" type="button" aria-label="Assistir depoimento">
-          <span></span>
-        </button>
-      </article>
+    <div class="video-area">
+      <div class="video-carousel" id="videoCarousel">
+        <article class="video-card">
+          <video src="assets/DEPOIMENTO-1.mov" preload="metadata"></video>
+          <button class="video-play" type="button" aria-label="Assistir depoimento"><span></span></button>
+        </article>
 
-      <article class="video-card">
-        <video src="assets/DEPOIMENTO-3.mov" preload="metadata"></video>
-        <button class="video-play" type="button" aria-label="Assistir depoimento">
-          <span></span>
-        </button>
-      </article>
+        <article class="video-card">
+          <video src="assets/DEPOIMENTO-3.mov" preload="metadata"></video>
+          <button class="video-play" type="button" aria-label="Assistir depoimento"><span></span></button>
+        </article>
 
-      <article class="video-card">
-        <video src="assets/DEPOIMENTO-4.mov" preload="metadata"></video>
-        <button class="video-play" type="button" aria-label="Assistir depoimento">
-          <span></span>
-        </button>
-      </article>
+        <article class="video-card">
+          <video src="assets/DEPOIMENTO-4.mov" preload="metadata"></video>
+          <button class="video-play" type="button" aria-label="Assistir depoimento"><span></span></button>
+        </article>
+      </div>
+
+      <div class="video-dots">
+        <button class="video-dot active" type="button" data-index="0"></button>
+        <button class="video-dot" type="button" data-index="1"></button>
+        <button class="video-dot" type="button" data-index="2"></button>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ========================= -->
-<!-- SESSÃO 9 — DEPOIMENTOS -->
+<!-- SESSÃO 9 — IMAGENS -->
 <!-- ========================= -->
 
 <section class="image-testimonials">
@@ -1820,17 +1823,17 @@
     <div class="image-fade image-fade-right"></div>
 
     <div class="image-carousel-track">
-      <img src="assets/DEPOIMENTO 1 IMAGEM .webp" alt="Depoimento de paciente">
-      <img src="assets/2DEPOIMENTO 2 IMAGEM.webp" alt="Depoimento de paciente">
-      <img src="assets/DEPOIMENTO 3 IMAGEM.webp" alt="Depoimento de paciente">
-      <img src="assets/DEPOIMENTO 4 IMAGEM.webp" alt="Depoimento de paciente">
-      <img src="assets/DEPOIMENTO 5 IMAGEM.webp" alt="Depoimento de paciente">
+      <img src="assets/2DEPOIMENTO 2 IMAGEM.webp" alt="Depoimento">
+      <img src="assets/DEPOIMENTO 1 IMAGEM .webp" alt="Depoimento">
+      <img src="assets/DEPOIMENTO 3 IMAGEM.webp" alt="Depoimento">
+      <img src="assets/DEPOIMENTO 4 IMAGEM.webp" alt="Depoimento">
+      <img src="assets/DEPOIMENTO 5 IMAGEM.webp" alt="Depoimento">
 
-      <img src="assets/DEPOIMENTO 1 IMAGEM .webp" alt="Depoimento de paciente">
-      <img src="assets/2DEPOIMENTO 2 IMAGEM.webp" alt="Depoimento de paciente">
-      <img src="assets/DEPOIMENTO 3 IMAGEM.webp" alt="Depoimento de paciente">
-      <img src="assets/DEPOIMENTO 4 IMAGEM.webp" alt="Depoimento de paciente">
-      <img src="assets/DEPOIMENTO 5 IMAGEM.webp" alt="Depoimento de paciente">
+      <img src="assets/2DEPOIMENTO 2 IMAGEM.webp" alt="Depoimento">
+      <img src="assets/DEPOIMENTO 1 IMAGEM .webp" alt="Depoimento">
+      <img src="assets/DEPOIMENTO 3 IMAGEM.webp" alt="Depoimento">
+      <img src="assets/DEPOIMENTO 4 IMAGEM.webp" alt="Depoimento">
+      <img src="assets/DEPOIMENTO 5 IMAGEM.webp" alt="Depoimento">
     </div>
   </div>
 
@@ -1840,301 +1843,381 @@
 </section>
 
 <style>
-  .video-testimonials,
-  .image-testimonials {
-    background: #fff;
-    overflow: hidden;
+.video-testimonials,
+.image-testimonials {
+  background: #fff;
+  overflow: hidden;
+}
+
+.video-testimonials {
+  padding: 110px 0 70px;
+}
+
+.video-testimonials-inner {
+  width: min(1160px, calc(100% - 90px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .92fr 1.08fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.video-copy h2,
+.image-testimonials-title {
+  font-size: 50px;
+  line-height: .96;
+  letter-spacing: -0.075em;
+  font-weight: 700;
+  color: #176f31;
+}
+
+.video-copy p {
+  margin-top: 28px;
+  font-size: 29px;
+  line-height: 1.12;
+  letter-spacing: -0.075em;
+  font-weight: 300;
+  color: #111;
+}
+
+.video-area {
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 0 24px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.video-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.video-card {
+  position: relative;
+  flex: 0 0 calc((100% - 24px) / 2);
+  height: 470px;
+  border-radius: 28px;
+  overflow: hidden;
+  scroll-snap-align: center;
+  background: #ddd;
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* BOTÃO IGUAL REFERÊNCIA */
+.video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 104px;
+  height: 104px;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 999px;
+  background: radial-gradient(circle, #f5f815 0%, #dbe500 58%, #babc27 100%);
+  box-shadow: 0 0 34px rgba(219, 229, 0, .75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.video-play span {
+  width: 0;
+  height: 0;
+  margin-left: 8px;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 34px solid #176f31;
+}
+
+.video-card.playing .video-play {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin-top: 4px;
+}
+
+.video-dot {
+  width: 13px;
+  height: 13px;
+  border: none;
+  border-radius: 999px;
+  background: #d8d8d8;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.video-dot.active {
+  background: #176f31;
+  transform: scale(1.15);
+}
+
+/* IMAGENS */
+
+.image-testimonials {
+  padding: 30px 0 110px;
+}
+
+.image-testimonials-title {
+  width: min(1160px, calc(100% - 90px));
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.image-carousel-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: max-content;
+  animation: testimonialLoop 34s linear infinite;
+  will-change: transform;
+}
+
+.image-carousel-wrap:hover .image-carousel-track {
+  animation-play-state: paused;
+}
+
+.image-carousel-track img {
+  flex: 0 0 auto;
+  width: 245px;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-fade {
+  position: absolute;
+  top: 0;
+  width: 190px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.image-fade-left {
+  left: 0;
+  background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0) 100%);
+}
+
+.image-fade-right {
+  right: 0;
+  background: linear-gradient(270deg, #fff 0%, rgba(255,255,255,0) 100%);
+}
+
+@keyframes testimonialLoop {
+  from {
+    transform: translateX(0);
   }
 
+  to {
+    transform: translateX(calc(-50% - 14px));
+  }
+}
+
+.testimonial-cta {
+  width: min(760px, calc(100% - 56px));
+  min-height: 92px;
+  margin: 76px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(110deg, #dbe500, #cbd200, #a0a500);
+  color: #176f31;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.065em;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
   .video-testimonials {
-    padding: 110px 0 72px;
+    padding: 78px 0 54px;
   }
 
   .video-testimonials-inner {
-    width: min(1160px, calc(100% - 90px));
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: .92fr 1.08fr;
-    gap: 70px;
-    align-items: center;
+    width: calc(100% - 52px);
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    align-items: flex-start;
   }
 
   .video-copy h2,
   .image-testimonials-title {
-    font-size: 50px;
-    line-height: .96;
+    font-size: 34px;
+    line-height: .98;
     letter-spacing: -0.075em;
-    font-weight: 700;
-    color: #176f31;
   }
 
   .video-copy p {
-    margin-top: 28px;
-    font-size: 29px;
-    line-height: 1.12;
-    letter-spacing: -0.075em;
-    font-weight: 300;
-    color: #111;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.08;
+    letter-spacing: -0.065em;
+  }
+
+  .video-area {
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
   }
 
   .video-carousel {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 8px 0 28px;
-    -webkit-overflow-scrolling: touch;
-    cursor: grab;
-  }
-
-  .video-carousel:active {
-    cursor: grabbing;
-  }
-
-  .video-carousel::-webkit-scrollbar {
-    display: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 20px;
   }
 
   .video-card {
-    position: relative;
     flex: 0 0 300px;
-    height: 470px;
-    border-radius: 28px;
-    overflow: hidden;
-    scroll-snap-align: center;
-    background: #ddd;
-  }
-
-  .video-card video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    height: 520px;
+    border-radius: 26px;
   }
 
   .video-play {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 104px;
-    height: 104px;
-    transform: translate(-50%, -50%);
-    border: none;
-    border-radius: 999px;
-    background: radial-gradient(circle, #f5f815 0%, #dbe500 58%, #babc27 100%);
-    box-shadow: 0 0 34px rgba(219, 229, 0, .65);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    width: 96px;
+    height: 96px;
   }
 
   .video-play span {
-    width: 0;
-    height: 0;
-    margin-left: 8px;
-    border-top: 22px solid transparent;
-    border-bottom: 22px solid transparent;
-    border-left: 34px solid #176f31;
-  }
-
-  .video-card.playing .video-play {
-    opacity: 0;
-    pointer-events: none;
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 31px;
   }
 
   .image-testimonials {
-    padding: 34px 0 110px;
+    padding: 22px 0 86px;
   }
 
   .image-testimonials-title {
-    width: min(1160px, calc(100% - 90px));
-    margin: 0 auto 52px;
-    text-align: center;
-  }
-
-  .image-carousel-wrap {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    width: calc(100% - 52px);
+    text-align: left;
+    margin-bottom: 34px;
   }
 
   .image-carousel-track {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    width: max-content;
-    animation: imageTestimonialsLoop 32s linear infinite;
-  }
-
-  .image-carousel-wrap:hover .image-carousel-track {
-    animation-play-state: paused;
+    gap: 16px;
+    animation-duration: 24s;
   }
 
   .image-carousel-track img {
-    flex: 0 0 auto;
-    width: 245px;
-    height: 520px;
-    object-fit: cover;
-    display: block;
+    width: 210px;
+    height: 450px;
   }
 
   .image-fade {
-    position: absolute;
-    top: 0;
-    width: 170px;
-    height: 100%;
-    z-index: 5;
-    pointer-events: none;
+    width: 76px;
   }
 
-  .image-fade-left {
-    left: 0;
-    background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0) 100%);
-  }
-
-  .image-fade-right {
-    right: 0;
-    background: linear-gradient(270deg, #fff 0%, rgba(255,255,255,0) 100%);
-  }
-
-  @keyframes imageTestimonialsLoop {
+  @keyframes testimonialLoop {
     from {
       transform: translateX(0);
     }
 
     to {
-      transform: translateX(-50%);
+      transform: translateX(calc(-50% - 8px));
     }
   }
 
   .testimonial-cta {
-    width: min(760px, calc(100% - 56px));
-    min-height: 92px;
-    margin: 76px auto 0;
-    border-radius: 999px;
-    background: linear-gradient(110deg, #dbe500, #cbd200, #a0a500);
-    color: #176f31;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 28px;
-    line-height: 1.05;
-    letter-spacing: -0.065em;
-    font-weight: 700;
+    min-height: 74px;
+    margin-top: 52px;
+    font-size: 18px;
+    padding: 0 20px;
   }
-
-  @media (max-width: 768px) {
-    .video-testimonials {
-      padding: 78px 0 54px;
-    }
-
-    .video-testimonials-inner {
-      width: calc(100% - 52px);
-      display: flex;
-      flex-direction: column;
-      gap: 38px;
-      align-items: flex-start;
-    }
-
-    .video-copy h2,
-    .image-testimonials-title {
-      font-size: 34px;
-      line-height: .98;
-      letter-spacing: -0.075em;
-    }
-
-    .video-copy p {
-      margin-top: 20px;
-      font-size: 18px;
-      line-height: 1.08;
-      letter-spacing: -0.065em;
-    }
-
-    .video-carousel {
-      width: 100vw;
-      margin-left: calc((100vw - 100%) / -2);
-      padding-left: 40px;
-      padding-right: 40px;
-      gap: 20px;
-    }
-
-    .video-card {
-      flex-basis: 300px;
-      height: 520px;
-      border-radius: 26px;
-    }
-
-    .video-play {
-      width: 96px;
-      height: 96px;
-    }
-
-    .video-play span {
-      border-top-width: 20px;
-      border-bottom-width: 20px;
-      border-left-width: 31px;
-    }
-
-    .image-testimonials {
-      padding: 22px 0 86px;
-    }
-
-    .image-testimonials-title {
-      width: calc(100% - 52px);
-      text-align: left;
-      margin-bottom: 34px;
-    }
-
-    .image-carousel-track {
-      gap: 16px;
-      animation-duration: 26s;
-    }
-
-    .image-carousel-track img {
-      width: 210px;
-      height: 450px;
-    }
-
-    .image-fade {
-      width: 72px;
-    }
-
-    .testimonial-cta {
-      min-height: 74px;
-      margin-top: 52px;
-      font-size: 18px;
-      padding: 0 20px;
-    }
-  }
+}
 </style>
 
 <script>
-  document.querySelectorAll(".video-card").forEach((card) => {
-    const video = card.querySelector("video");
-    const button = card.querySelector(".video-play");
+const videoCarousel = document.getElementById("videoCarousel");
+const videoCards = document.querySelectorAll(".video-card");
+const videoDots = document.querySelectorAll(".video-dot");
 
-    button.addEventListener("click", () => {
-      document.querySelectorAll(".video-card video").forEach((item) => {
-        if (item !== video) {
-          item.pause();
-          item.closest(".video-card").classList.remove("playing");
-        }
-      });
+function goToVideo(index) {
+  const card = videoCards[index];
+  if (!card) return;
 
-      video.setAttribute("controls", "controls");
-      video.play();
-      card.classList.add("playing");
-    });
-
-    video.addEventListener("pause", () => {
-      card.classList.remove("playing");
-    });
-
-    video.addEventListener("ended", () => {
-      card.classList.remove("playing");
-      video.removeAttribute("controls");
-    });
+  videoCarousel.scrollTo({
+    left: card.offsetLeft - videoCarousel.offsetLeft,
+    behavior: "smooth"
   });
+
+  videoDots.forEach(dot => dot.classList.remove("active"));
+  videoDots[index].classList.add("active");
+}
+
+videoDots.forEach(dot => {
+  dot.addEventListener("click", () => {
+    goToVideo(Number(dot.dataset.index));
+  });
+});
+
+videoCarousel.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  videoCards.forEach((card, index) => {
+    const distance = Math.abs(videoCarousel.scrollLeft - (card.offsetLeft - videoCarousel.offsetLeft));
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  videoDots.forEach(dot => dot.classList.remove("active"));
+  videoDots[closestIndex].classList.add("active");
+});
+
+videoCards.forEach(card => {
+  const video = card.querySelector("video");
+  const button = card.querySelector(".video-play");
+
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".video-card video").forEach(item => {
+      if (item !== video) {
+        item.pause();
+        item.closest(".video-card").classList.remove("playing");
+      }
+    });
+
+    video.setAttribute("controls", "controls");
+    video.play();
+    card.classList.add("playing");
+  });
+
+  video.addEventListener("pause", () => {
+    card.classList.remove("playing");
+  });
+
+  video.addEventListener("ended", () => {
+    card.classList.remove("playing");
+    video.removeAttribute("controls");
+  });
+});
 </script>
