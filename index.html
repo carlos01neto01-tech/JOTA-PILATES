@@ -2580,14 +2580,49 @@ videoCards.forEach(card => {
   </div>
 </section>
 
-<style>
-/* ========================= */
-/* SESSÃO 12 — UNIDADES */
-/* ========================= */
+<section class="locations-section" id="unidades">
+  <h2>Onde nos encontrar?</h2>
 
+  <div class="locations-grid">
+    <article class="location-card">
+      <div class="location-label">UNIDADE 1</div>
+
+      <a
+        class="map-link"
+        href="https://www.google.com/maps?q=Rua+Doutor+Mario+Clapier+Urbinatti,+1600,+Maring%C3%A1,+PR"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir Unidade 1 no Google Maps"
+      >
+        <img src="assets/UNIDADE 1.webp" alt="Mapa da Unidade 1">
+      </a>
+
+      <h3>Rua Doutor Mario Clapier Urbinatti, 1600</h3>
+    </article>
+
+    <article class="location-card">
+      <div class="location-label">UNIDADE 2</div>
+
+      <a
+        class="map-link"
+        href="https://www.google.com/maps?q=Rua+Santos+Dumont,+1306,+Maring%C3%A1,+PR"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir Unidade 2 no Google Maps"
+      >
+        <img src="assets/UNIDADE 2.webp" alt="Mapa da Unidade 2">
+      </a>
+
+      <h3>Rua Santos Dumont, 1306</h3>
+    </article>
+  </div>
+</section>
+
+<style>
 .locations-section {
-  background: #ffffff;
+  background: #fff;
   padding: 24px 0 140px;
+  overflow: hidden;
 }
 
 .locations-section h2 {
@@ -2623,7 +2658,7 @@ videoCards.forEach(card => {
   height: 54px;
   border-radius: 999px;
   background: #176f31;
-  color: #ffffff;
+  color: #fff;
   font-size: 25px;
   line-height: 1;
   letter-spacing: -0.055em;
@@ -2632,30 +2667,35 @@ videoCards.forEach(card => {
   align-items: center;
   justify-content: center;
   z-index: 5;
+  pointer-events: none;
 }
 
-.location-card a {
+.map-link {
   display: block;
-  overflow: hidden;
+  width: 100%;
+  border: 2px solid #dbe500;
   border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
 }
 
-.location-card img {
+.map-link img {
   width: 100%;
   height: 530px;
   object-fit: cover;
-  border: 2px solid #dbe500;
-  border-radius: 18px;
   display: block;
+  border: 0;
+  border-radius: 0;
   transition: transform .28s ease;
 }
 
-.location-card a:hover img {
+.map-link:hover img {
   transform: scale(1.02);
 }
 
 .location-card h3 {
-  margin-top: 32px;
+  max-width: 320px;
+  margin: 32px auto 0;
   font-size: 25px;
   line-height: .98;
   letter-spacing: -0.065em;
@@ -2663,27 +2703,29 @@ videoCards.forEach(card => {
   color: #080808;
 }
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
 @media (max-width: 768px) {
-
   .locations-section {
     padding: 0 0 92px;
   }
 
   .locations-section h2 {
     font-size: 34px;
-    line-height: .96;
     margin-bottom: 74px;
   }
 
   .locations-grid {
-    width: calc(100% - 70px);
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 72px;
+    align-items: center;
+  }
+
+  .location-card {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .location-label {
@@ -2693,12 +2735,19 @@ videoCards.forEach(card => {
     font-size: 20px;
   }
 
-  .location-card img {
-    height: 520px;
+  .map-link {
+    width: 100%;
+    margin: 0 auto;
     border-radius: 18px;
   }
 
+  .map-link img {
+    height: 520px;
+    object-fit: cover;
+  }
+
   .location-card h3 {
+    max-width: 280px;
     margin-top: 28px;
     font-size: 17px;
     line-height: 1.02;
