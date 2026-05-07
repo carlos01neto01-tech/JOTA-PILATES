@@ -1767,3 +1767,388 @@
   </script>
 </body>
 </html>
+<!-- ========================= -->
+<!-- SESSÃO 08 — VÍDEOS -->
+<!-- ========================= -->
+
+<section class="sessao-depoimentos-video">
+
+  <div class="container depoimentos-wrapper">
+
+    <div class="depoimentos-textos">
+      <h2>
+        Histórias de<br>
+        movimento,<br>
+        cuidado e evolução.
+      </h2>
+
+      <p>
+        Cada pessoa chega com uma necessidade diferente:
+        dor, insegurança, falta de mobilidade ou desejo
+        de envelhecer melhor. O objetivo é acompanhar
+        essa evolução de perto, respeitando cada fase
+        do processo. Aqui, cada conquista importa.
+      </p>
+    </div>
+
+    <div class="videos-scroll">
+
+      <!-- VIDEO 1 -->
+      <div class="video-card">
+        <video controls preload="metadata" poster="thumb-video-1.webp">
+          <source src="assets/DEPOIMENTO-1.mov" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- VIDEO 2 -->
+      <div class="video-card">
+        <video controls preload="metadata" poster="thumb-video-2.webp">
+          <source src="assets/DEPOIMENTO-3.mov" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- VIDEO 3 -->
+      <div class="video-card">
+        <video controls preload="metadata" poster="thumb-video-3.webp">
+          <source src="assets/DEPOIMENTO-4.mov" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SESSÃO 09 — CARROSSEL -->
+<!-- ========================= -->
+
+<section class="sessao-feedbacks">
+
+  <div class="container">
+
+    <h2 class="titulo-feedbacks">
+      Depoimentos
+    </h2>
+
+  </div>
+
+  <div class="feedback-track-wrapper">
+
+    <div class="fade-left"></div>
+    <div class="fade-right"></div>
+
+    <div class="feedback-track">
+
+      <!-- BLOCO DUPLICADO -->
+      <!-- PARA LOOP INFINITO -->
+
+      <img src="assets/DEPOIMENTO 1 IMAGEM (3).webp" alt="">
+      <img src="assets/2DEPOIMENTO 2 IMAGEM(3).webp" alt="">
+      <img src="assets/DEPOIMENTO 3 IMAGEM(3).webp" alt="">
+      <img src="assets/DEPOIMENTO 4 IMAGEM(3).webp" alt="">
+      <img src="assets/DEPOIMENTO 5 IMAGEM(3).webp" alt="">
+
+      <!-- DUPLICA -->
+      <img src="assets/DEPOIMENTO 1 IMAGEM (3).webp" alt="">
+      <img src="assets/2DEPOIMENTO 2 IMAGEM(3).webp" alt="">
+      <img src="assets/DEPOIMENTO 3 IMAGEM(3).webp" alt="">
+      <img src="assets/DEPOIMENTO 4 IMAGEM(3).webp" alt="">
+      <img src="assets/DEPOIMENTO 5 IMAGEM(3).webp" alt="">
+
+    </div>
+
+  </div>
+
+  <div class="container depoimento-btn-wrapper">
+
+    <a href="#" class="btn-agendar">
+      Agendar avaliação pelo WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<style>
+
+/* ========================= */
+/* BASE */
+/* ========================= */
+
+.sessao-depoimentos-video,
+.sessao-feedbacks{
+    width:100%;
+    background:#f3f3f3;
+    overflow:hidden;
+}
+
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 32px;
+    box-sizing:border-box;
+}
+
+/* ========================= */
+/* SESSAO VIDEO */
+/* ========================= */
+
+.sessao-depoimentos-video{
+    padding:120px 0 90px;
+}
+
+.depoimentos-wrapper{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:70px;
+}
+
+.depoimentos-textos{
+    width:40%;
+}
+
+.depoimentos-textos h2{
+    font-size:72px;
+    line-height:0.95;
+    font-weight:700;
+    color:#14732E;
+    margin-bottom:32px;
+    letter-spacing:-3px;
+}
+
+.depoimentos-textos p{
+    font-size:28px;
+    line-height:1.12;
+    font-weight:400;
+    color:#111;
+    max-width:620px;
+}
+
+.videos-scroll{
+    width:60%;
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding-bottom:10px;
+}
+
+.videos-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.video-card{
+    flex:none;
+    width:320px;
+    scroll-snap-align:center;
+}
+
+.video-card video{
+    width:100%;
+    height:620px;
+    object-fit:cover;
+    border-radius:34px;
+    background:#000;
+}
+
+/* ========================= */
+/* SESSAO FEEDBACKS */
+/* ========================= */
+
+.sessao-feedbacks{
+    padding:40px 0 120px;
+}
+
+.titulo-feedbacks{
+    font-size:72px;
+    line-height:1;
+    font-weight:700;
+    color:#14732E;
+    letter-spacing:-3px;
+    margin-bottom:60px;
+}
+
+.feedback-track-wrapper{
+    width:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.feedback-track{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    width:max-content;
+    animation:feedbackLoop 30s linear infinite;
+}
+
+.feedback-track img{
+    width:290px;
+    border-radius:8px;
+    flex:none;
+}
+
+.feedback-track-wrapper:hover .feedback-track{
+    animation-play-state:paused;
+}
+
+.fade-left,
+.fade-right{
+    position:absolute;
+    top:0;
+    width:220px;
+    height:100%;
+    z-index:3;
+    pointer-events:none;
+}
+
+.fade-left{
+    left:0;
+    background:linear-gradient(
+        90deg,
+        #f3f3f3 0%,
+        rgba(243,243,243,0) 100%
+    );
+}
+
+.fade-right{
+    right:0;
+    background:linear-gradient(
+        270deg,
+        #f3f3f3 0%,
+        rgba(243,243,243,0) 100%
+    );
+}
+
+@keyframes feedbackLoop{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* ========================= */
+/* BOTAO */
+/* ========================= */
+
+.depoimento-btn-wrapper{
+    display:flex;
+    justify-content:center;
+    margin-top:80px;
+}
+
+.btn-agendar{
+    width:100%;
+    max-width:760px;
+    height:92px;
+    background:#D9E000;
+    border-radius:999px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#14732E;
+    font-size:34px;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.btn-agendar:hover{
+    transform:scale(1.02);
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.container{
+    padding:0 24px;
+}
+
+.sessao-depoimentos-video{
+    padding:90px 0 70px;
+}
+
+.depoimentos-wrapper{
+    flex-direction:column;
+    gap:40px;
+}
+
+.depoimentos-textos{
+    width:100%;
+}
+
+.depoimentos-textos h2{
+    font-size:34px;
+    line-height:0.95;
+    letter-spacing:-1.5px;
+    margin-bottom:22px;
+}
+
+.depoimentos-textos p{
+    font-size:16px;
+    line-height:1.08;
+    max-width:100%;
+}
+
+.videos-scroll{
+    width:100%;
+    gap:18px;
+    padding-left:14px;
+}
+
+.video-card{
+    width:300px;
+}
+
+.video-card video{
+    height:540px;
+    border-radius:26px;
+}
+
+.sessao-feedbacks{
+    padding:10px 0 90px;
+}
+
+.titulo-feedbacks{
+    font-size:34px;
+    letter-spacing:-1.5px;
+    margin-bottom:36px;
+}
+
+.feedback-track{
+    gap:16px;
+}
+
+.feedback-track img{
+    width:190px;
+}
+
+.fade-left,
+.fade-right{
+    width:80px;
+}
+
+.depoimento-btn-wrapper{
+    margin-top:50px;
+}
+
+.btn-agendar{
+    max-width:100%;
+    height:74px;
+    font-size:18px;
+    padding:0 24px;
+    text-align:center;
+}
+
+}
+
+</style>
