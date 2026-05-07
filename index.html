@@ -1313,7 +1313,7 @@
 </section>
 
 <!-- ===================================================== -->
-<!-- SESSÃO 5 - POR QUE ESCOLHER -->
+<!-- SESSÃO 5 -->
 <!-- ===================================================== -->
 
 <section class="why-jmota">
@@ -1480,7 +1480,7 @@
 <style>
 
 /* ===================================================== */
-/* REMOVE BRILHO EXAGERADO */
+/* HERO */
 /* ===================================================== */
 
 .hero{
@@ -1515,6 +1515,8 @@
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center top;
+  display:block;
 }
 
 .why-overlay{
@@ -1563,7 +1565,7 @@
 .why-carousel-wrapper{
   position:relative;
 
-  width:760px;
+  width:980px;
   height:300px;
 
   overflow:hidden;
@@ -1601,7 +1603,9 @@
 
   padding-left:64px;
 
-  font-size:42px;
+  white-space:nowrap;
+
+  font-size:40px;
   line-height:1;
   letter-spacing:-0.065em;
 
@@ -1747,6 +1751,7 @@
   position:relative;
 
   isolation:isolate;
+  overflow:visible;
 }
 
 /* ===================================================== */
@@ -1862,8 +1867,6 @@
 
   text-align:center;
 
-  padding:34px;
-
   z-index:3;
 
   transition:
@@ -1871,9 +1874,10 @@
     transform .4s ease;
 }
 
-/* FRENTE */
+/* FRONT */
 
 .process-front{
+  padding:34px;
   opacity:1;
 }
 
@@ -1883,7 +1887,7 @@
   transform:scale(.86);
 }
 
-/* DESCRIÇÃO */
+/* BACK */
 
 .process-back{
   opacity:0;
@@ -1897,7 +1901,16 @@
 
   font-weight:300;
 
-  max-width:74%;
+  width:100%;
+  height:100%;
+
+  padding:36px;
+
+  text-align:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .process-circle:hover .process-back,
@@ -1930,7 +1943,14 @@
 
   font-weight:700;
 
-  max-width:82%;
+  max-width:72%;
+}
+
+/* PROCESSO 03 */
+
+.process-3 .process-front h3{
+  font-size:26px;
+  max-width:64%;
 }
 
 /* ===================================================== */
@@ -1938,7 +1958,7 @@
 /* ===================================================== */
 
 .process-1{
-  top:0;
+  top:20px;
   left:50%;
 
   transform:translateX(-50%);
@@ -1951,7 +1971,7 @@
 
 .process-3{
   left:50%;
-  bottom:0;
+  bottom:20px;
 
   transform:translateX(-50%);
 }
@@ -1979,8 +1999,6 @@
 
 @media(max-width:768px){
 
-  /* HERO */
-
   .hero{
     background:
       linear-gradient(
@@ -1996,15 +2014,20 @@
   /* WHY */
 
   .why-jmota{
-    min-height:auto;
-    padding-bottom:80px;
+    min-height:980px;
+  }
+
+  .why-image img{
+    object-position:center top;
+    height:620px;
   }
 
   .why-overlay{
     background:linear-gradient(
       180deg,
       rgba(244,244,244,0) 0%,
-      rgba(244,244,244,.95) 60%,
+      rgba(244,244,244,.10) 38%,
+      rgba(244,244,244,.88) 72%,
       rgba(244,244,244,1) 100%
     );
   }
@@ -2012,7 +2035,7 @@
   .why-content{
     width:calc(100% - 56px);
 
-    padding:540px 0 0;
+    padding-top:560px;
   }
 
   .why-title{
@@ -2031,7 +2054,12 @@
   }
 
   .why-item{
-    font-size:22px;
+    white-space:normal;
+
+    font-size:20px;
+    line-height:1.02;
+
+    max-width:90%;
 
     padding-left:44px;
   }
@@ -2099,7 +2127,7 @@
     width:100%;
     max-width:430px;
 
-    height:500px;
+    height:520px;
 
     margin:0 auto;
   }
@@ -2107,15 +2135,15 @@
   /* OVAIS */
 
   .process-ring{
-    width:310px;
-    height:205px;
+    width:300px;
+    height:190px;
 
     border-width:4px;
   }
 
   .process-ring-2{
-    width:250px;
-    height:150px;
+    width:240px;
+    height:135px;
 
     border-width:3px;
   }
@@ -2127,19 +2155,19 @@
     height:118px;
   }
 
-  /* CONTEÚDO */
+  /* FRONT */
 
   .process-front{
     padding:18px;
   }
 
+  /* BACK */
+
   .process-back{
     font-size:10px;
-    line-height:1.05;
+    line-height:1.04;
 
-    max-width:78%;
-
-    padding:12px;
+    padding:14px;
   }
 
   /* NÚMERO */
@@ -2159,30 +2187,35 @@
     max-width:86%;
   }
 
+  .process-3 .process-front h3{
+    font-size:13px;
+    max-width:64%;
+  }
+
   /* POSIÇÕES */
 
   .process-1{
-    top:0;
+    top:52px;
     left:50%;
 
     transform:translateX(-50%);
   }
 
   .process-2{
-    top:150px;
-    right:18px;
+    top:185px;
+    right:10px;
   }
 
   .process-3{
-    bottom:0;
+    bottom:52px;
     left:50%;
 
     transform:translateX(-50%);
   }
 
   .process-4{
-    top:150px;
-    left:18px;
+    top:185px;
+    left:10px;
   }
 
   .process-1:hover,
